@@ -485,8 +485,17 @@ function translateTagList(element, key) {
 }
 
 function getStoredLanguage() {
-    const stored = localStorage.getItem("portfolio-language");
-    return stored === "en" ? "en" : "fr";
+  const stored = localStorage.getItem("portfolio-language");
+
+  if (stored === "en") {
+    return "en";
+  }
+
+  if (stored === "fr") {
+    return "fr";
+  }
+
+  return "fr";
 }
 
 function setLanguage(language) {
@@ -563,7 +572,11 @@ function setLanguage(language) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    setLanguage(getStoredLanguage());
+  if (!localStorage.getItem("portfolio-language")) {
+    localStorage.setItem("portfolio-language", "fr");
+  }
+
+  setLanguage(getStoredLanguage());
 
     const frButton = document.getElementById("lang-fr");
     const enButton = document.getElementById("lang-en");
