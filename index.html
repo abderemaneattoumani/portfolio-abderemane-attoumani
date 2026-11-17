@@ -1,0 +1,2312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title id="page-title">Portfolio - Abdérémane Attoumani</title>
+    <meta name="description"
+        content="Portfolio d'Abdérémane Attoumani, étudiant BTS SIO SISR à Nantes : systèmes, réseaux, cybersécurité, Docker, supervision et SecOps.">
+    <meta name="author" content="Abdérémane Attoumani">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Abdérémane Attoumani — Portfolio SISR & Cybersécurité">
+    <meta property="og:description"
+        content="Étudiant BTS SIO SISR : systèmes, réseaux, cybersécurité, Docker, Grafana, Nmap et support N1-N2.">
+    <meta property="og:url" content="https://abderemaneattoumani.vercel.app/">
+    <meta property="og:image" content="https://abderemaneattoumani.vercel.app/assets/icons/social-preview.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abdérémane Attoumani — Portfolio SISR & Cybersécurité">
+    <meta name="twitter:description"
+        content="Étudiant BTS SIO SISR : systèmes, réseaux, cybersécurité, Docker, Grafana et Nmap.">
+    <meta name="twitter:image" content="https://abderemaneattoumani.vercel.app/assets/icons/social-preview.png">
+
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/icons/favicon-180.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;family=Ubuntu+Mono:wght@400;700&amp;family=Geist:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Ubuntu', 'Geist', sans-serif;
+                user-select: none;
+                overflow: hidden;
+            }
+
+            code,
+            kbd,
+            pre,
+            .font-mono {
+                font-family: 'Ubuntu Mono', monospace;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(20, 20, 20, 0.4);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(233, 84, 32, 0.45);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(233, 84, 32, 0.85);
+        }
+
+        /* Ubuntu Desktop Geometric Gradient */
+        .ubuntu-wallpaper {
+            background: radial-gradient(circle at 85% 15%, #77216F 0%, transparent 45%),
+                radial-gradient(circle at 15% 85%, #5E2750 0%, transparent 50%),
+                linear-gradient(135deg, #2C001E 0%, #1e091b 45%, #111111 100%);
+            background-attachment: fixed;
+        }
+
+        .ubuntu-mesh {
+            background-image:
+                radial-gradient(rgba(233, 84, 32, 0.08) 1px, transparent 1px),
+                linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* Gnome Yaru Window Effects */
+        .yaru-window-shadow {
+            box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .window-focused {
+            box-shadow: 0 25px 60px -8px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(233, 84, 32, 0.5), 0 0 20px rgba(233, 84, 32, 0.15) !important;
+        }
+
+        .window-animating {
+            transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, width 0.2s ease, height 0.2s ease, top 0.2s ease, left 0.2s ease;
+        }
+
+        /* Resize handles */
+        .resizer {
+            position: absolute;
+            z-index: 50;
+        }
+
+        .resizer-r {
+            right: 0;
+            top: 0;
+            width: 7px;
+            height: 100%;
+            cursor: ew-resize;
+        }
+
+        .resizer-b {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 7px;
+            cursor: ns-resize;
+        }
+
+        .resizer-l {
+            left: 0;
+            top: 0;
+            width: 7px;
+            height: 100%;
+            cursor: ew-resize;
+        }
+
+        .resizer-t {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 7px;
+            cursor: ns-resize;
+        }
+
+        .resizer-rb {
+            right: 0;
+            bottom: 0;
+            width: 12px;
+            height: 12px;
+            cursor: nwse-resize;
+        }
+
+        .resizer-lb {
+            left: 0;
+            bottom: 0;
+            width: 12px;
+            height: 12px;
+            cursor: nesw-resize;
+        }
+
+        .resizer-rt {
+            right: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            cursor: nesw-resize;
+        }
+
+        .resizer-lt {
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            cursor: nwse-resize;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "yaru-orange": "#E95420",
+                        "yaru-orange-light": "#FF7A45",
+                        "yaru-aubergine": "#77216F",
+                        "yaru-dark-aubergine": "#2C001E",
+                        "yaru-mid-aubergine": "#5E2750",
+                        "yaru-surface": "#242424",
+                        "yaru-surface-dark": "#181818",
+                        "yaru-surface-light": "#303030",
+                        "yaru-border": "rgba(255, 255, 255, 0.1)",
+                        "primary": "#ffb59e",
+                        "primary-container": "#f85e2a",
+                        "surface": "#131313",
+                        "surface-container": "#202020",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        ubuntu: ['Ubuntu', 'sans-serif'],
+                        mono: ['Ubuntu Mono', 'monospace'],
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body
+    class="bg-[#111111] text-[#E5E2E1] font-ubuntu h-screen w-screen overflow-hidden flex flex-col ubuntu-wallpaper select-none">
+    <!-- ========================================================================= -->
+    <!-- 1. GNOME SHELL TOP BAR                                                    -->
+    <!-- ========================================================================= -->
+    <header
+        class="h-7 w-full bg-[#0c0c0c]/95 backdrop-blur-md border-b border-black/50 z-50 flex items-center justify-between px-3 text-[13px] text-white shrink-0 shadow-sm relative">
+        <!-- Left: Activities & Active App Menu -->
+        <div class="flex items-center gap-2">
+            <button
+                class="px-2 py-0.5 rounded hover:bg-white/10 transition-colors font-medium tracking-wide flex items-center gap-1.5 text-[12px] text-zinc-200"
+                onclick="toggleAppOverview()" title="Vue d'ensemble des applications (Super / Win)">
+                <span class="w-2 h-2 rounded-full bg-yaru-orange"></span>
+                <span data-i18n="nav.activities">Activités</span>
+            </button>
+            <div class="h-3 w-px bg-white/15"></div>
+            <!-- Dynamic active application menu -->
+            <div class="flex items-center gap-1.5 px-2 py-0.5 rounded hover:bg-white/10 cursor-pointer font-medium text-[12px] text-zinc-100"
+                id="topbar-app-btn" onclick="focusTopWindow()">
+                <svg class="w-3.5 h-3.5 text-yaru-orange" fill="currentColor" viewbox="0 0 24 24">
+                    <circle cx="12" cy="12" fill="#E95420" r="11"></circle>
+                    <circle cx="12" cy="12" fill="#2C001E" r="5"></circle>
+                    <circle cx="12" cy="4.5" fill="#fff" r="1.5"></circle>
+                    <circle cx="5.5" cy="16" fill="#fff" r="1.5"></circle>
+                    <circle cx="18.5" cy="16" fill="#fff" r="1.5"></circle>
+                </svg>
+                <span data-i18n="stages.title" id="topbar-app-name">Stages &amp; Expériences 24.04</span>
+                <span class="material-symbols-outlined text-[13px] text-zinc-400">expand_more</span>
+            </div>
+            <div class="hidden xl:flex items-center gap-1.5 text-[11px] text-zinc-400 font-mono">
+                <span class="px-1.5 py-0.2 rounded bg-white/5 border border-white/10 text-yaru-orange"
+                    data-i18n="nav.location">
+                    Nantes · Paris</span>
+                <span class="text-zinc-600">|</span>
+            </div>
+        </div>
+        <!-- Center: Clock & Date -->
+        <div class="absolute left-1/2 -translate-x-1/2 flex items-center">
+            <button
+                class="px-2.5 py-0.5 rounded hover:bg-white/10 transition-colors text-[12px] font-medium text-zinc-200 flex items-center gap-1.5"
+                onclick="toggleCalendarWidget()">
+                <span class="material-symbols-outlined text-[14px] text-yaru-orange">event_note</span>
+                <span id="gnome-clock">Mer 14 Mai 14:32</span>
+            </button>
+        </div>
+        <!-- Right: Quick Settings Pill & Utilities -->
+        <div class="flex items-center gap-2">
+            <!-- Fast Quick Action: CV Button in Top Bar -->
+            <button
+                class="hidden md:flex items-center gap-1 px-2 py-0.5 rounded bg-yaru-orange/20 hover:bg-yaru-orange text-zinc-100 hover:text-white transition-all border border-yaru-orange/40 text-[11px] font-medium font-mono"
+                onclick="wm.openWindow('cv-win')">
+                <span class="material-symbols-outlined text-[13px]">description</span>
+                <span data-i18n="nav.cv">CV PDF</span>
+            </button>
+            <!-- Quick Search HUD trigger -->
+            <button
+                class="hidden sm:flex items-center gap-1 px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-zinc-300 text-[11px] font-mono border border-white/10"
+                onclick="toggleCommandPalette()">
+                <span class="material-symbols-outlined text-[12px]">search</span>
+                <span>Ctrl + K / ⌘K</span>
+            </button>
+            <!-- Language tag -->
+            <div class="hidden sm:flex items-center text-[10px] font-mono text-zinc-400 bg-white/5 px-1.5 py-0.5 rounded border border-white/10"
+                role="group" aria-label="Choix de langue / Language selection">
+                <button id="lang-fr" type="button"
+                    class="px-1.5 py-0.5 rounded text-yaru-orange font-bold hover:bg-white/10 transition-colors"
+                    aria-pressed="true">
+                    FR
+                </button>
+
+                <span class="mx-0.5 text-zinc-600">/</span>
+
+                <button id="lang-en" type="button"
+                    class="px-1.5 py-0.5 rounded text-yaru-orange hover:bg-white/10 transition-colors"
+                    aria-pressed="false">
+                    EN
+                </button>
+            </div>
+            <!-- GNOME Status Pill -->
+            <button
+                class="flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white/10 hover:bg-white/20 transition-all text-zinc-200 text-[12px]"
+                onclick="toggleQuickSettings()">
+                <span class="flex items-center gap-1 text-[11px] text-emerald-400 font-mono font-medium">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="hidden lg:inline" data-i18n="nav.network">WG-SISR</span>
+                </span>
+                <span class="material-symbols-outlined text-[14px]">wifi</span>
+                <span class="material-symbols-outlined text-[14px]">volume_up</span>
+                <span class="material-symbols-outlined text-[14px]">battery_charging_full</span>
+                <span class="material-symbols-outlined text-[13px]">power_settings_new</span>
+            </button>
+        </div>
+    </header>
+    <!-- ========================================================================= -->
+    <!-- MAIN DESKTOP ENVIRONMENT                                                  -->
+    <!-- ========================================================================= -->
+    <div class="flex-1 flex overflow-hidden relative ubuntu-mesh" id="desktop-viewport">
+        <!-- ======================================================================= -->
+        <!-- 2. UBUNTU VERTICAL DOCK (Left Edge)                                     -->
+        <!-- ======================================================================= -->
+        <aside
+            class="w-14 sm:w-16 h-full bg-[#121212]/92 backdrop-blur-xl border-r border-white/10 flex flex-col items-center justify-between py-2 z-40 shrink-0 shadow-2xl select-none"
+            id="dock-panel">
+            <!-- Top Apps list -->
+            <div class="flex flex-col items-center gap-2 w-full">
+                <!-- Ubuntu Official Logo Icon -->
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-yaru-orange to-red-600 flex items-center justify-center shadow-lg mb-1 group cursor-pointer hover:scale-105 transition-transform"
+                    onclick="toggleAppOverview()" title="Ubuntu 24.04 LTS Desktop">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24">
+                        <circle cx="12" cy="12" fill="none" r="10" stroke="#ffffff" stroke-width="2"></circle>
+                        <circle cx="12" cy="5" r="2"></circle>
+                        <circle cx="6" cy="16" r="2"></circle>
+                        <circle cx="18" cy="16" r="2"></circle>
+                        <path d="M7 14 A 6 6 0 0 1 17 14" fill="none" stroke="#ffffff" stroke-width="1.8"></path>
+                    </svg>
+                </div>
+                <div class="w-8 h-px bg-white/10 mb-0.5"></div>
+                <!-- 1. Stages.app (Flagship window) -->
+                <button
+                    class="dock-btn relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-yaru-orange hover:text-white transition-all group"
+                    data-target="stages-win" onclick="wm.dockClick('stages-win')" data-i18n-title="dock.stages"
+                    title="Stages &amp; Expériences">
+                    <span
+                        class="dock-ind absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-4 rounded-r bg-yaru-orange transition-all"
+                        id="dock-ind-stages-win"></span>
+                    <span class="material-symbols-outlined text-[24px] sm:text-[26px]">assignment_turned_in</span>
+                    <span
+                        class="absolute bottom-0 right-1 px-1 rounded text-[8px] sm:text-[9px] font-mono bg-yaru-orange text-white font-bold">27</span>
+                </button>
+                <!-- 2. Projets.app -->
+                <button
+                    class="dock-btn relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-amber-400 hover:text-white transition-all group"
+                    data-target="projets-win" onclick="wm.dockClick('projets-win')"
+                    title="Projets.app — Labs &amp; Fichiers">
+                    <span
+                        class="dock-ind absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-0 rounded-r bg-yaru-orange transition-all opacity-0"
+                        id="dock-ind-projets-win"></span>
+                    <span class="material-symbols-outlined text-[24px] sm:text-[26px]">folder_special</span>
+                </button>
+                <!-- 3. Competences.app -->
+                <button
+                    class="dock-btn relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-emerald-400 hover:text-white transition-all group"
+                    data-target="skills-win" onclick="wm.dockClick('skills-win')"
+                    title="Compétences.app — Matrice / SecOps">
+                    <span
+                        class="dock-ind absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-0 rounded-r bg-yaru-orange transition-all opacity-0"
+                        id="dock-ind-skills-win"></span>
+                    <span class="material-symbols-outlined text-[24px] sm:text-[26px]">hub</span>
+                </button>
+                <!-- 4. Parcours.app -->
+                <button
+                    class="dock-btn relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-sky-400 hover:text-white transition-all group"
+                    data-target="parcours-win" onclick="wm.dockClick('parcours-win')"
+                    title="Parcours.app — Formations &amp; Alternance">
+                    <span
+                        class="dock-ind absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-0 rounded-r bg-yaru-orange transition-all opacity-0"
+                        id="dock-ind-parcours-win"></span>
+                    <span class="material-symbols-outlined text-[24px] sm:text-[26px]">timeline</span>
+                </button>
+                <!-- 5. Terminal.app -->
+                <button
+                    class="dock-btn relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-purple-300 hover:text-white transition-all group"
+                    data-target="terminal-win" onclick="wm.dockClick('terminal-win')"
+                    title="Terminal.app — sisr-node-044 zsh">
+                    <span
+                        class="dock-ind absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-0 rounded-r bg-yaru-orange transition-all opacity-0"
+                        id="dock-ind-terminal-win"></span>
+                    <span class="material-symbols-outlined text-[24px] sm:text-[26px]">terminal</span>
+                </button>
+                <!-- 6. CV.pdf -->
+                <button
+                    class="dock-btn relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-rose-400 hover:text-white transition-all group"
+                    data-target="cv-win" onclick="wm.dockClick('cv-win')" title="CV.pdf — Document Viewer">
+                    <span
+                        class="dock-ind absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-0 rounded-r bg-yaru-orange transition-all opacity-0"
+                        id="dock-ind-cv-win"></span>
+                    <span class="material-symbols-outlined text-[24px] sm:text-[26px]">picture_as_pdf</span>
+                </button>
+                <!-- 7. Contact.app -->
+                <button
+                    class="dock-btn relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 hover:bg-white/15 flex items-center justify-center text-teal-300 hover:text-white transition-all group"
+                    data-target="contact-win" onclick="wm.dockClick('contact-win')"
+                    title="Contact.app — Recrutement &amp; Messagerie">
+                    <span
+                        class="dock-ind absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-0 rounded-r bg-yaru-orange transition-all opacity-0"
+                        id="dock-ind-contact-win"></span>
+                    <span class="material-symbols-outlined text-[24px] sm:text-[26px]">mail</span>
+                </button>
+            </div>
+            <!-- Bottom Dock: App Grid Button -->
+            <div class="flex flex-col items-center gap-1.5 w-full">
+                <button
+                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 hover:bg-yaru-orange/30 flex items-center justify-center text-zinc-300 hover:text-yaru-orange transition-all"
+                    onclick="toggleAppOverview()" title="Afficher toutes les applications">
+                    <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+                        <circle cx="5" cy="5" r="2"></circle>
+                        <circle cx="12" cy="5" r="2"></circle>
+                        <circle cx="19" cy="5" r="2"></circle>
+                        <circle cx="5" cy="12" r="2"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                        <circle cx="19" cy="12" r="2"></circle>
+                        <circle cx="5" cy="19" r="2"></circle>
+                        <circle cx="12" cy="19" r="2"></circle>
+                        <circle cx="19" cy="19" r="2"></circle>
+                    </svg>
+                </button>
+            </div>
+        </aside>
+        <!-- ======================================================================= -->
+        <!-- DESKTOP CANVAS (ICON LAUNCHERS & FLOATING WINDOWS)                       -->
+        <!-- ======================================================================= -->
+        <div class="flex-1 h-full relative overflow-hidden" id="desktop-canvas">
+            <!-- DESKTOP BACKGROUND SHORTCUT ICONS -->
+            <div
+                class="absolute inset-0 p-4 sm:p-6 grid grid-flow-col grid-rows-6 gap-3 sm:gap-4 auto-cols-max pointer-events-auto z-0 select-none">
+                <div class="w-20 sm:w-24 p-2 rounded-xl hover:bg-white/10 flex flex-col items-center text-center cursor-pointer transition-all group"
+                    onclick="wm.openWindow('stages-win')">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-yaru-orange to-red-600 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform text-white">
+                        <span class="material-symbols-outlined text-[28px]">assignment_turned_in</span>
+                    </div>
+                    <span
+                        class="text-[11px] sm:text-xs text-zinc-200 font-medium mt-1.5 drop-shadow leading-tight">Stages
+                        SISR</span>
+                </div>
+                <div class="w-20 sm:w-24 p-2 rounded-xl hover:bg-white/10 flex flex-col items-center text-center cursor-pointer transition-all group"
+                    onclick="wm.openWindow('projets-win')">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-700 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform text-white">
+                        <span class="material-symbols-outlined text-[28px]">folder_special</span>
+                    </div>
+                    <span data-i18n="desktop.projects"
+                        class="text-[11px] sm:text-xs text-zinc-200 font-medium mt-1.5 drop-shadow leading-tight"
+                        data-i18n="desktop.projects">Projets
+                        Labs</span>
+                </div>
+                <div class="w-20 sm:w-24 p-2 rounded-xl hover:bg-white/10 flex flex-col items-center text-center cursor-pointer transition-all group"
+                    onclick="wm.openWindow('skills-win')">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-800 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform text-white">
+                        <span class="material-symbols-outlined text-[28px]">hub</span>
+                    </div>
+                    <span class="text-[11px] sm:text-xs text-zinc-200 font-medium mt-1.5 drop-shadow leading-tight"
+                        data-i18n="desktop.skills">Compétences</span>
+                </div>
+                <div class="w-20 sm:w-24 p-2 rounded-xl hover:bg-white/10 flex flex-col items-center text-center cursor-pointer transition-all group"
+                    onclick="wm.openWindow('terminal-win')">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#2C001E] to-purple-800 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform text-white border border-purple-500/30">
+                        <span class="material-symbols-outlined text-[28px]">terminal</span>
+                    </div>
+                    <span class="text-[11px] sm:text-xs text-zinc-200 font-medium mt-1.5 drop-shadow leading-tight"
+                        data-i18n="desktop.terminal">Terminal
+                        zsh</span>
+                </div>
+                <div class="w-20 sm:w-24 p-2 rounded-xl hover:bg-white/10 flex flex-col items-center text-center cursor-pointer transition-all group"
+                    onclick="wm.openWindow('cv-win')">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-600 to-red-800 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform text-white">
+                        <span class="material-symbols-outlined text-[28px]">picture_as_pdf</span>
+                    </div>
+                    <span class="text-[11px] sm:text-xs text-zinc-200 font-medium mt-1.5 drop-shadow leading-tight"
+                        data-i18n="desktop.cv">CV_2027.pdf</span>
+                </div>
+                <div class="w-20 sm:w-24 p-2 rounded-xl hover:bg-white/10 flex flex-col items-center text-center cursor-pointer transition-all group"
+                    onclick="wm.openWindow('contact-win')">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-teal-500 to-cyan-700 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform text-white">
+                        <span class="material-symbols-outlined text-[28px]">mail</span>
+                    </div>
+                    <span class="text-[11px] sm:text-xs text-zinc-200 font-medium mt-1.5 drop-shadow leading-tight"
+                        data-i18n="desktop.contact">Contact</span>
+                </div>
+            </div>
+            <!-- HINT HUD FOR DESKTOP USER -->
+            <div
+                class="absolute bottom-3 right-4 z-10 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/40 backdrop-blur-md border border-white/10 text-[11px] font-mono text-zinc-400 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-yaru-orange"></span>
+                <span data-i18n="desktop.hint">Glisser l'en-tête pour déplacer · Bords pour redimensionner · </span>
+                <span>
+                    <kbd 
+                        class="px-1 py-0.5 rounded bg-white/10 text-zinc-300"
+                        data-i18n="desktop.hintEscape">
+                            Échap
+                    </kbd>
+                </span>
+                <span data-i18n="desktop.hintClose"> pour fermer</span>
+            </div>
+            <!-- =================================================================== -->
+            <!-- FLOATING WINDOW 1: STAGES.APP (MAIN WINDOW)                        -->
+            <!-- =================================================================== -->
+            <div class="wm-window absolute bg-[#242424] rounded-xl yaru-window-shadow border border-white/15 flex flex-col overflow-hidden select-none"
+                id="stages-win" style="width: 1040px; height: 680px; min-width: 320px; min-height: 280px; z-index: 20;">
+                <!-- Titlebar / Header -->
+                <div
+                    class="wm-headerbar h-11 bg-[#1e1e1e] border-b border-black/50 px-4 flex items-center justify-between select-none cursor-move shrink-0">
+                    <div class="flex items-center gap-2 pointer-events-none">
+                        <span
+                            class="w-4 h-4 rounded bg-yaru-orange flex items-center justify-center text-white text-[10px]">
+                            <span class="material-symbols-outlined text-[12px]">verified</span>
+                        </span>
+                        <span class="font-medium text-[13px] text-zinc-200" data-i18n="stages.barTitle">
+                            Stages &amp; Expériences — Abdérémane Attoumani</span>
+                        <span
+                            class="hidden md:inline-block px-2 py-0.5 rounded-full text-[10px] font-mono bg-yaru-orange/20 text-yaru-orange-light border border-yaru-orange/30">
+                            Lycée La Colinière · Nantes
+                        </span>
+                    </div>
+                    <!-- Right side GNOME Yaru controls -->
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px] transition-colors"
+                            onclick="wm.minimizeWindow('stages-win')" title="Minimiser (-)">
+                            <span class="material-symbols-outlined text-[10px]">remove</span>
+                        </button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px] transition-colors"
+                            onclick="wm.maximizeWindow('stages-win')" title="Maximiser / Restaurer (carré)">
+                            <span class="material-symbols-outlined text-[10px]">crop_square</span>
+                        </button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#E95420] hover:bg-red-500 text-white flex items-center justify-center text-[10px] transition-colors"
+                            onclick="wm.closeWindow('stages-win')" title="Fermer (croix)">
+                            <span class="material-symbols-outlined text-[10px]">close</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Yaru Actionbar / Tabs Navigation -->
+                <div
+                    class="bg-[#1b1b1b] px-4 border-b border-black/40 flex items-center justify-between flex-wrap gap-2 shrink-0">
+                    <div class="flex items-center gap-1 py-1.5 overflow-x-auto text-[13px]">
+                        <button
+                            class="px-3.5 py-1.5 rounded-md bg-[#2f2f2f] text-white font-medium flex items-center gap-2 border-b-2 border-yaru-orange transition-all"
+                            id="tab-btn-s2" onclick="switchStageTab('s2')">
+                            <span class="w-2 h-2 rounded-full bg-yaru-orange animate-pulse"></span>
+                            <span data-i18n="stages.tab.current">Stage 2e Année (Priorité Active)</span>
+                            <span
+                                class="px-1.5 py-0.2 rounded text-[10px] font-mono bg-yaru-orange/30 text-white font-semibold">Janv.
+                                2027</span>
+                        </button>
+                        <button
+                            class="px-3.5 py-1.5 rounded-md text-zinc-400 hover:text-zinc-200 hover:bg-[#252525] flex items-center gap-2 transition-all"
+                            id="tab-btn-sparklin" onclick="switchStageTab('sparklin')">
+                            <span class="material-symbols-outlined text-[16px] text-zinc-400">corporate_fare</span>
+                            <span data-i18n="stages.tab.sparklin">Stage 1ère Année — Sparklin</span>
+                            <span
+                                class="px-1.5 py-0.2 rounded text-[10px] font-mono bg-zinc-700/60 text-zinc-300">Validé</span>
+                        </button>
+                        <button
+                            class="px-3.5 py-1.5 rounded-md text-zinc-400 hover:text-zinc-200 hover:bg-[#252525] flex items-center gap-2 transition-all"
+                            id="tab-btn-alternance" onclick="switchStageTab('alternance')">
+                            <span class="material-symbols-outlined text-[16px] text-zinc-400">school</span>
+                            <span data-i18n="stages.tab.alternance">Alternance Bac+3 (2027-2028)</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 py-1.5 text-[12px]">
+                        <button
+                            class="px-2.5 py-1 rounded bg-[#2e2e2e] hover:bg-[#383838] text-zinc-200 border border-white/10 flex items-center gap-1.5 font-mono"
+                            onclick="wm.openWindow('contact-win')">
+                            <span class="material-symbols-outlined text-[14px] text-emerald-400">mail</span>
+                            <span data-i18n="stages.contact">Contacter / Recruter</span>
+                        </button>
+                        <button
+                            class="px-2.5 py-1 rounded bg-yaru-orange hover:bg-yaru-orange-light text-white font-medium flex items-center gap-1.5 shadow"
+                            onclick="wm.openWindow('cv-win')">
+                            <span class="material-symbols-outlined text-[14px]">download</span>
+                            <span data-i18n="stages.cv">Fiche &amp; CV</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Window Content Area -->
+                <div class="p-4 sm:p-6 bg-[#242424] text-zinc-200 flex-1 overflow-y-auto">
+                    <!-- ONGLET 2 (PAR DÉFAUT) : STAGE 2E ANNÉE -->
+                    <div class="flex flex-col gap-5" id="panel-stage-s2">
+                        <!-- Urgent Banner -->
+                        <div
+                            class="rounded-xl p-5 bg-gradient-to-r from-yaru-dark-aubergine via-[#3a1232] to-[#261622] border border-yaru-aubergine/60 shadow-lg relative overflow-hidden">
+                            <div
+                                class="absolute right-0 top-0 translate-x-8 -translate-y-8 w-44 h-44 bg-yaru-orange/15 rounded-full blur-2xl pointer-events-none">
+                            </div>
+                            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5 relative z-10">
+                                <div class="space-y-2">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <span
+                                            class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-yaru-orange text-white uppercase tracking-wider shadow-sm"
+                                            data-i18n="stages.priority">
+                                            Recherche Prioritaire
+                                        </span>
+                                        <span
+                                            class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1 font-medium"
+                                            data-i18n="stages.available">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                                            DISPONIBLE IMMÉDIATEMENT POUR CONVENTION
+                                        </span>
+                                    </div>
+                                    <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight"
+                                        data-i18n="stages.currentTitle">
+                                        Stage de Fin de BTS SIO SISR — 7 Semaines Conventionnées
+                                    </h2>
+                                    <div
+                                        class="flex flex-wrap items-center gap-y-2 gap-x-4 text-[13px] text-zinc-300 font-mono">
+                                        <div class="flex items-center gap-1 text-yaru-orange-light font-bold">
+                                            <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                                            <span data-i18n="stages.dates">11 Janvier — 26 Février 2027</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 text-zinc-200">
+                                            <span
+                                                class="material-symbols-outlined text-[16px] text-sky-400">location_on</span>
+                                            <span data-i18n="stages.location"><strong>Nantes / Paris</strong> (Mobilité
+                                                IDF &amp; Grand
+                                                Ouest)</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 text-zinc-300">
+                                            <span
+                                                class="material-symbols-outlined text-[16px] text-emerald-400">home_work</span>
+                                            <span data-i18n="stages.workMode">Sur site ou format hybride</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
+                                    <button
+                                        class="px-4 py-2.5 rounded-lg bg-yaru-orange hover:bg-yaru-orange-light text-white font-medium text-[13px] shadow-lg flex items-center justify-center gap-2 transition-all"
+                                        onclick="wm.openWindow('contact-win')">
+                                        <span class="material-symbols-outlined text-[18px]">handshake</span>
+                                        <span data-i18n="stages.propose">Proposer une opportunité</span>
+                                    </button>
+                                    <button
+                                        class="px-3.5 py-2.5 rounded-lg bg-[#303030] hover:bg-[#3a3a3a] text-zinc-200 border border-white/10 text-[13px] flex items-center justify-center gap-2 transition-all font-mono"
+                                        onclick="wm.openWindow('cv-win')">
+                                        <span class="material-symbols-outlined text-[16px]">download</span>
+                                        <span data-i18n="stages.pdf">Fiche Récap (PDF)</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Targeted Technical Domains -->
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-2 font-mono"
+                                    data-i18n="stages.domains">
+                                    <span class="material-symbols-outlined text-[16px] text-yaru-orange">tune</span>
+                                    Domaines d'application &amp; compétences opérationnelles ciblées
+                                </h3>
+                                <span class="text-xs text-zinc-500 font-mono" data-i18n="stages.bts">BTS SIO Option
+                                    SISR</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+                                <!-- Domain 1 -->
+                                <div
+                                    class="p-4 rounded-xl bg-[#1e1e1e] border border-white/10 hover:border-yaru-orange/50 transition-colors flex flex-col justify-between">
+                                    <div class="space-y-2">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-yaru-orange/15 text-yaru-orange flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-[20px]">terminal</span>
+                                        </div>
+                                        <h4 class="font-bold text-white text-[15px]" data-i18n="stages.linuxTitle">
+                                            Administration Linux &amp; Windows
+                                        </h4>
+                                        <p class="text-zinc-400 text-[12px] leading-relaxed"
+                                            data-i18n="stages.linuxText">
+                                            Déploiement et durcissement Ubuntu Server, Kali Linux, Active Directory
+                                            (GPO, DNS, DHCP), virtualisation VMware, Oracle VirtualBox.
+                                        </p>
+                                    </div>
+                                    <div class="mt-3 pt-2.5 border-t border-white/5 flex flex-wrap gap-1 font-mono text-[10px] text-zinc-300"
+                                        data-i18n-tags="stages.linuxTags">
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">Ubuntu Server</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">Kali Linux</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">AD DS</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">VMware</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">Oracle VirtualBox</span>
+                                    </div>
+                                </div>
+                                <!-- Domain 2 -->
+                                <div
+                                    class="p-4 rounded-xl bg-[#1e1e1e] border border-white/10 hover:border-emerald-500/50 transition-colors flex flex-col justify-between">
+                                    <div class="space-y-2">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-[20px]">security</span>
+                                        </div>
+                                        <h4 class="font-bold text-white text-[15px]" data-i18n="stages.networkTitle">
+                                            Réseaux, Pare-feux &amp; VPN</h4>
+                                        <p class="text-zinc-400 text-[12px] leading-relaxed"
+                                            data-i18n="stages.networkText">
+                                            TCP/IP, VLAN, routage Cisco, règles pfSense.
+                                        </p>
+                                    </div>
+                                    <div class="mt-3 pt-2.5 border-t border-white/5 flex flex-wrap gap-1 font-mono text-[10px] text-zinc-300"
+                                        data-i18n-tags="stages.networkTags">
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">Cisco</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">pfSense</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">VLANs</span>
+                                    </div>
+                                </div>
+                                <!-- Domain 3 -->
+                                <div
+                                    class="p-4 rounded-xl bg-[#1e1e1e] border border-white/10 hover:border-purple-400/50 transition-colors flex flex-col justify-between">
+                                    <div class="space-y-2">
+                                        <div
+                                            class="w-8 h-8 rounded-lg bg-purple-500/15 text-purple-400 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-[20px]">monitoring</span>
+                                        </div>
+                                        <h4 class="font-bold text-white text-[15px]" data-i18n="stages.secopsTitle">
+                                            SecOps, PRA/PCA &amp; Support N1/N2
+                                        </h4>
+                                        <p class="text-zinc-400 text-[12px] leading-relaxed"
+                                            data-i18n="stages.secopsText">
+                                            Conteneurisation Docker sécurisée, monitoring Grafana, audits de
+                                            vulnérabilité Nmap/Kali, gestion ticketing GLPI &amp; sauvegardes 3-2-1.
+                                        </p>
+                                    </div>
+                                    <div class="mt-3 pt-2.5 border-t border-white/5 flex flex-wrap gap-1 font-mono text-[10px] text-zinc-300"
+                                        data-i18n-tags="stages.secopsTags">
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">Docker</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">Grafana</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-white/5">GLPI N1-N2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Value proposition -->
+                        <div
+                            class="p-4 rounded-xl bg-[#1d1d1d] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined text-yaru-orange text-[28px] shrink-0 mt-0.5">verified_user</span>
+                                <div>
+                                    <h4 class="text-white font-bold text-[14px]" data-i18n="stages.valueTitle">Pourquoi
+                                        intégrer mon profil pour votre
+                                        équipe ?</h4>
+                                    <p class="text-zinc-400 text-[12px] mt-0.5" data-i18n="stages.valueText">
+                                        Double culture : solide rigueur en administration système &amp; réseau combinée
+                                        à des compétences en automatisation et développement web. Autonomie immédiate,
+                                        curiosité technique et sens du service utilisateur.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 shrink-0">
+                                <button
+                                    class="px-3 py-1.5 rounded bg-[#2e2e2e] hover:bg-[#383838] text-white text-[12px] font-mono flex items-center gap-1.5"
+                                    onclick="switchStageTab('sparklin')">
+                                    <span data-i18n="stages.seeSparklin">Voir stage Sparklin</span>
+                                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ONGLET 1 : STAGE 1ÈRE ANNÉE — SPARKLIN -->
+                    <div class="hidden flex-col gap-5" id="panel-stage-sparklin">
+                        <div
+                            class="p-5 rounded-xl bg-[#1e1e1e] border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-yaru-orange to-amber-500 flex items-center justify-center text-white font-bold text-2xl shadow-md">
+                                    S
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h3 class="text-lg font-bold text-white" data-i18n="sparklin.role">Sparklin —
+                                            Technicien Systèmes, Réseaux
+                                            &amp; SecOps</h3>
+                                        <span
+                                            class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                                            data-i18n="sparklin.validated">
+                                            Stage BTS 1re Année Validé</span>
+                                    </div>
+                                    <p class="text-[13px] text-zinc-400 mt-0.5" data-i18n="sparklin.description">
+                                        Stage d'immersion technique en environnement de production réelle et
+                                        renforcement sécurité.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="font-mono text-[11px] text-zinc-400 text-left md:text-right bg-white/5 p-2 rounded-lg">
+                                <div class="text-white font-semibold" data-i18n="sparklin.supervisor">Tuteur : Alexandre
+                                    Couturon</div>
+                                <div data-i18n="sparklin.location">Lieu : Région Ouest · Hybride</div>
+                                <!--<div class="text-emerald-400 font-bold">Évaluation : Mention Très Favorable</div>-->
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                            <div
+                                class="p-4 rounded-xl bg-[#1c1c1c] border border-white/10 hover:border-yaru-orange/40 transition-colors">
+                                <div class="flex items-center gap-2 text-yaru-orange-light font-semibold text-[13px] mb-1.5"
+                                    data-i18n="sparklin.auditTitle">
+                                    <span class="material-symbols-outlined text-[18px]">bug_report</span>
+                                    Audit de Vulnérabilités &amp; Cartographie Réseau
+                                </div>
+                                <p class="text-zinc-300 text-[12px] leading-relaxed" data-i18n="sparklin.auditText">
+                                    Cartographie des équipements et des ports ouverts via <strong
+                                        class="text-white">Nmap</strong> et l'environnement <strong
+                                        class="text-white">Kali Linux</strong>. Détection des faiblesses
+                                    d'authentification et identification des services obsolètes.
+                                </p>
+                                <div class="mt-2 text-[11px] font-mono text-zinc-400" data-i18n="sparklin.auditTools">
+                                    Outils : Nmap, Kali Linux, Wireshark</div>
+                            </div>
+                            <div
+                                class="p-4 rounded-xl bg-[#1c1c1c] border border-white/10 hover:border-yaru-orange/40 transition-colors">
+                                <div class="flex items-center gap-2 text-sky-400 font-semibold text-[13px] mb-1.5"
+                                    data-i18n="sparklin.monitoringTitle">
+                                    <span class="material-symbols-outlined text-[18px]">monitoring</span>
+                                    Conteneurisation Docker &amp; Monitoring Grafana
+                                </div>
+                                <p class="text-zinc-300 text-[12px] leading-relaxed"
+                                    data-i18n="sparklin.monitoringText">
+                                    Déploiement d'une stack complète de surveillance via <strong
+                                        class="text-white">Docker Compose</strong>. Configuration d'alertes sur les
+                                    métriques clés (CPU, RAM, bande passante) et tableaux de bord Grafana.
+                                </p>
+                                <div class="mt-2 text-[11px] font-mono text-zinc-400"
+                                    data-i18n="sparklin.monitoringTools">Outils : Docker, Compose, Grafana,
+                                    Node Exporter</div>
+                            </div>
+                            <div
+                                class="p-4 rounded-xl bg-[#1c1c1c] border border-white/10 hover:border-yaru-orange/40 transition-colors">
+                                <div class="flex items-center gap-2 text-emerald-400 font-semibold text-[13px] mb-1.5"
+                                    data-i18n="sparklin.hardeningTitle">
+                                    <span class="material-symbols-outlined text-[18px]">lock_reset</span>
+                                    Durcissement Secrets Docker &amp; Alignement CRA
+                                </div>
+                                <p class="text-zinc-300 text-[12px] leading-relaxed" data-i18n="sparklin.hardeningText">
+                                    Mise en place de pratiques sécurisées de gestion des secrets (.env non versionnés,
+                                    Docker Secrets, exclusion Git) conforme aux exigences européennes du <strong
+                                        class="text-white">Cyber Resilience Act (CRA)</strong>.
+                                </p>
+                                <div class="mt-2 text-[11px] font-mono text-zinc-400"
+                                    data-i18n="sparklin.hardeningTools">Référentiel : Cyber Resilience Act
+                                    (CRA), ANSSI, Vault</div>
+                            </div>
+                            <div
+                                class="p-4 rounded-xl bg-[#1c1c1c] border border-white/10 hover:border-yaru-orange/40 transition-colors">
+                                <div class="flex items-center gap-2 text-amber-400 font-semibold text-[13px] mb-1.5"
+                                    data-i18n="sparklin.supportTitle">
+                                    <span class="material-symbols-outlined text-[18px]">support_agent</span>
+                                    Gestion IPAM, Routage &amp; Support Utilisateur N1-N2
+                                </div>
+                                <p class="text-zinc-300 text-[12px] leading-relaxed" data-i18n="sparklin.supportText">
+                                    Optimisation du plan d'adressage IP (IPAM) et routage interne. Prise en charge des
+                                    tickets d'assistance sous <strong class="text-white">GLPI</strong> : diagnostics
+                                    réseaux, résolution des pannes et documentation.
+                                </p>
+                                <div class="mt-2 text-[11px] font-mono text-zinc-400" data-i18n="sparklin.supportTools">
+                                    Outils : GLPI, IPAM, DHCP/DNS
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ONGLET 3 : ALTERNANCE 2027-2028 -->
+                    <div class="hidden flex-col gap-5" id="panel-stage-alternance">
+                        <div
+                            class="p-5 rounded-xl bg-gradient-to-br from-[#1e1e1e] to-[#2a1727] border border-white/10 space-y-3">
+                            <span
+                                class="px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-purple-500/20 text-purple-300 border border-purple-500/30 font-semibold"
+                                data-i18n="alternance.perspective">
+                                Perspective d'Avenir Post-BTS
+                            </span>
+                            <h3 class="text-xl font-bold text-white" data-i18n="alternance.title">Projet d'Alternance
+                                2027 — 2028</h3>
+                            <p class="text-zinc-300 text-[13px] leading-relaxed" data-i18n="alternance.text">
+                                Dans la continuité directe de mon cursus BTS SIO SISR et de mon stage de 2e année, je
+                                prépare une poursuite d'études en contrat d'alternance à Nantes ou Paris : <br />
+                                <strong class="text-yaru-orange-light">Bachelor ou Master en Cybersécurité / SecOps ou
+                                    Ingénierie Systèmes &amp; Réseaux (en cours d'arbitrage).</strong>
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 rounded-xl bg-[#1e1e1e] border border-white/10 space-y-2">
+                                <div class="flex items-center gap-2 text-yaru-orange font-bold text-[14px]"
+                                    data-i18n="alternance.strengths">
+                                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                                    Atouts pour l'entreprise d'accueil
+                                </div>
+                                <ul class="text-[12px] text-zinc-300 space-y-1.5">
+                                    <li class="flex items-center gap-2" data-i18n="alternance.strength1"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-yaru-orange"></span><span>Transition
+                                            fluide : possibilité d'enchaîner directement après le stage.</span></li>
+                                    <li class="flex items-center gap-2" data-i18n="alternance.strength2"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-yaru-orange"></span><span>Montée en
+                                            compétences rapide sur vos stacks internes (Cloud, Ansible,
+                                            Firewalls).</span></li>
+                                    <li class="flex items-center gap-2" data-i18n="alternance.strength3"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-yaru-orange"></span><span>Investissement
+                                            sérieux et pérenne sur 1 à 3 ans.</span></li>
+                                </ul>
+                            </div>
+                            <div class="p-4 rounded-xl bg-[#1e1e1e] border border-white/10 space-y-2">
+                                <div class="flex items-center gap-2 text-emerald-400 font-bold text-[14px]"
+                                    data-i18n="alternance.rhythm">
+                                    <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                    Rythme &amp; Mobilité
+                                </div>
+                                <ul class="text-[12px] text-zinc-300 space-y-1.5">
+                                    <li class="flex items-center gap-2" data-i18n="alternance.rhythm1"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span><strong>Rythme
+                                                préconisé :</strong> ? sem. entreprise / ? sem. école ou ?j / ?j.</span>
+                                    </li>
+                                    <li class="flex items-center gap-2" data-i18n="alternance.rhythm2"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span><strong>Localisations
+                                                :</strong> Nantes Métropole (44) &amp; Paris / Île-de-France.</span>
+                                    </li>
+                                    <li class="flex items-center gap-2" data-i18n="alternance.rhythm3"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span><strong>Statut
+                                                :</strong> Échangeable dès maintenant pour pré-embauche.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-[#191919] border border-white/10 flex items-center justify-between">
+                            <span class="text-[12px] text-zinc-400" data-i18n="alternance.question">Intéressé par une
+                                collaboration stage suivie d'une
+                                alternance ?</span>
+                            <button
+                                class="px-3.5 py-1.5 rounded bg-yaru-orange hover:bg-yaru-orange-light text-white text-[12px] font-medium transition-all"
+                                onclick="wm.openWindow('contact-win')" data-i18n="alternance.contact">
+                                Prendre contact
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Status Bar -->
+                <div
+                    class="h-8 bg-[#1a1a1a] border-t border-black/40 px-4 flex items-center justify-between text-[11px] font-mono text-zinc-400 select-none shrink-0">
+                    <div class="flex items-center gap-3">
+                        <span class="flex items-center gap-1.5 text-emerald-400">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                            <span data-i18n="stages.barFooterTitle">Statut : En recherche active (Nantes / Paris)</span>
+                        </span>
+                        <span class="text-zinc-600">|</span>
+                        <span class="hidden sm:inline" data-i18n="stages.barFooterSubtitle">BTS SIO SISR — Lycée La Colinière</span>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-2">
+                        <span data-i18n="terminal.footer">Terminal ID : sisr-node-044</span>
+                        <span class="text-zinc-600">|</span>
+                        <span>Ubuntu Yaru Dark v24.04</span>
+                    </div>
+                </div>
+            </div>
+            <!-- =================================================================== -->
+            <!-- FLOATING WINDOW 2: PROJETS.APP                                     -->
+            <!-- =================================================================== -->
+            <div class="wm-window hidden absolute bg-[#242424] rounded-xl yaru-window-shadow border border-white/15 flex-col overflow-hidden select-none"
+                id="projets-win" style="width: 820px; height: 580px; min-width: 320px; min-height: 280px; z-index: 21;">
+                <div
+                    class="wm-headerbar h-11 bg-[#1e1e1e] border-b border-black/50 px-4 flex items-center justify-between select-none cursor-move shrink-0">
+                    <div class="flex items-center gap-2 pointer-events-none">
+                        <span class="material-symbols-outlined text-amber-400 text-[18px]">folder</span>
+                        <span class="font-medium text-[13px] text-white" data-i18n="projects.barTitle">Fichiers —
+                            /home/sisr/projets</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.minimizeWindow('projets-win')"><span
+                                class="material-symbols-outlined text-[10px]">remove</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.maximizeWindow('projets-win')"><span
+                                class="material-symbols-outlined text-[10px]">crop_square</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#E95420] text-white flex items-center justify-center text-[10px]"
+                            onclick="wm.closeWindow('projets-win')"><span
+                                class="material-symbols-outlined text-[10px]">close</span></button>
+                    </div>
+                </div>
+                <div class="p-6 overflow-y-auto flex-1 bg-[#1e1e1e] text-zinc-200">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 data-i18n="projects.title" class="text-base sm:text-lg font-bold text-white">Réalisations
+                            Techniques &amp; Labs SISR / IA</h3>
+                        <span class="text-xs font-mono text-zinc-400 bg-white/5 px-2 py-1 rounded" id="projects-counter"
+                            data-i18n="projects.counter">
+                            0 projets documentés
+                        </span>
+                    </div>
+                    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div
+                            class="p-4 rounded-xl bg-[#242424] border border-white/10 hover:border-amber-400/50 transition-colors">
+                            <h4 class="font-bold text-white flex items-center gap-2 text-sm">
+                                <span class="material-symbols-outlined text-emerald-400 text-[20px]">password</span>
+                                Password Analyzer AI
+                            </h4>
+                            <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                                Outil d'audit heuristique et analyse par apprentissage de robustesse des mots de passe.
+                                Intègre les recommandations ANSSI et détection de dictionnaires fuités.
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-1 text-[10px] font-mono text-zinc-300">
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">Python</span>
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">NLP</span>
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">Streamlit</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-[#242424] border border-white/10 hover:border-amber-400/50 transition-colors">
+                            <h4 class="font-bold text-white flex items-center gap-2 text-sm">
+                                <span class="material-symbols-outlined text-sky-400 text-[20px]">shield</span>
+                                AI Network Intrusion Detector
+                            </h4>
+                            <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                                Sonde de détection d'anomalies de trafic réseau en écoute sur les trames pcap, détection
+                                de scans furtifs Nmap SYN/FIN avec détection d’anomalies.
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-1 text-[10px] font-mono text-zinc-300">
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">Wireshark</span>
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">Scikit-learn</span>
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">Docker</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-[#242424] border border-white/10 hover:border-amber-400/50 transition-colors">
+                            <h4 class="font-bold text-white flex items-center gap-2 text-sm">
+                                <span class="material-symbols-outlined text-amber-400 text-[20px]">dns</span>
+                                EpiSight Infrastructure Monitor
+                            </h4>
+                            <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                                Mise en place d’une stack de supervision des infrastructures Linux Debian et switchs
+                                Cisco avec collecte SNMP et dashboards dynamiques Grafana avec alertes Slack.
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-1 text-[10px] font-mono text-zinc-300">
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">Docker Compose</span>
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">Grafana</span>
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">SNMP</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-[#242424] border border-white/10 hover:border-amber-400/50 transition-colors">
+                            <h4 class="font-bold text-white flex items-center gap-2 text-sm">
+                                <span class="material-symbols-outlined text-purple-400 text-[20px]">checklist</span>
+                                Task Flow SecOps
+                            </h4>
+                            <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                                Plateforme interne de ticketing et automatisation de checklists de durcissement système
+                                basées sur les référentiels CIS Benchmarks.
+                            </p>
+                            <div class="mt-3 flex flex-wrap gap-1 text-[10px] font-mono text-zinc-300">
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">Bash Automation</span>
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">API REST</span>
+                                <span class="px-1.5 py-0.5 rounded bg-white/5">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="h-8 bg-[#181818] border-t border-black/40 px-4 flex items-center justify-between text-[11px] font-mono text-zinc-400 shrink-0">
+                    <span id="projects-footer-count">0 élément</span>
+                    <span data-i18n="projects.footerApp">Ubuntu Nautilus 24.04</span>
+                </div>
+            </div>
+            <div id="project-detail-win"
+                class="wm-window hidden absolute bg-[#242424] rounded-xl yaru-window-shadow border border-white/15 flex flex-col overflow-hidden select-none"
+                style="width: 820px; height: 620px; min-width: 320px; min-height: 280px; z-index: 27;" role="dialog"
+                aria-modal="false" aria-labelledby="project-detail-title">
+                <div
+                    class="wm-headerbar h-11 bg-[#1e1e1e] border-b border-black/50 px-4 flex items-center justify-between select-none cursor-move shrink-0">
+                    <div class="flex items-center gap-2 pointer-events-none min-w-0">
+                        <span class="material-symbols-outlined text-amber-400 text-[18px]">folder_open</span>
+                        <span id="project-detail-title" class="font-medium text-[13px] text-white truncate"></span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px] transition-colors"
+                            onclick="wm.minimizeWindow('project-detail-win')" title="Réduire">
+                            <span class="material-symbols-outlined text-[10px]">remove</span>
+                        </button>
+
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px] transition-colors"
+                            onclick="wm.maximizeWindow('project-detail-win')" title="Agrandir / Restaurer">
+                            <span class="material-symbols-outlined text-[10px]">crop_square</span>
+                        </button>
+
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#E95420] hover:bg-red-500 text-white flex items-center justify-center text-[10px] transition-colors"
+                            onclick="wm.closeWindow('project-detail-win')" title="Fermer">
+                            <span class="material-symbols-outlined text-[10px]">close</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 bg-[#1e1e1e] text-zinc-200">
+                    <div class="rounded-lg overflow-hidden border border-white/10 bg-[#181818] mb-4">
+                        <img id="project-detail-image"
+                            class="block w-full h-auto max-h-[32vh] sm:max-h-[38vh] object-contain" alt="">
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <span id="project-detail-category"
+                            class="px-2 py-1 rounded-full text-[10px] font-mono bg-amber-500/15 text-amber-300 border border-amber-400/30"></span>
+
+                        <span id="project-detail-status"
+                            class="px-2 py-1 rounded-full text-[10px] font-mono bg-emerald-500/15 text-emerald-300 border border-emerald-400/30"></span>
+                    </div>
+
+                    <div class="grid gap-4 md:grid-cols-2 mb-4">
+                        <div class="p-4 rounded-xl bg-[#242424] border border-white/10">
+                            <h4 data-i18n="project.problem" class="text-sm font-bold text-white mb-2">Problème</h4>
+                            <p id="project-detail-problem" class="text-xs text-zinc-300 leading-relaxed"></p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-[#242424] border border-white/10">
+                            <h4 data-i18n="project.solution" class="text-sm font-bold text-white mb-2">Solution</h4>
+                            <p id="project-detail-solution" class="text-xs text-zinc-300 leading-relaxed"></p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-[#242424] border border-white/10 md:col-span-2">
+                            <h4 data-i18n="project.impact" class="text-sm font-bold text-white mb-2">Impact</h4>
+                            <p id="project-detail-impact" class="text-xs text-zinc-300 leading-relaxed"></p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 data-i18n="project.stack" class="text-sm font-bold text-white mb-2">Stack technique</h4>
+                        <div id="project-detail-stack" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+                        <a id="project-detail-github" target="_blank" rel="noopener noreferrer"
+                            class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-mono border border-white/10"
+                            data-i18n="project.github">
+                            Code source
+                        </a>
+
+                        <a id="project-detail-demo" target="_blank" rel="noopener noreferrer"
+                            class="px-4 py-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-mono border border-emerald-400/30"
+                            data-i18n="project.demo">
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- =================================================================== -->
+            <!-- FLOATING WINDOW 3: TERMINAL.APP                                    -->
+            <!-- =================================================================== -->
+            <div class="wm-window hidden absolute bg-[#1e091b] rounded-xl yaru-window-shadow border border-purple-500/30 flex-col overflow-hidden select-none font-mono"
+                id="terminal-win"
+                style="width: 760px; height: 500px; min-width: 320px; min-height: 260px; z-index: 22;">
+                <div
+                    class="wm-headerbar h-10 bg-[#2C001E] border-b border-white/10 px-4 flex items-center justify-between select-none cursor-move shrink-0 text-xs text-white">
+                    <div class="flex items-center gap-2 pointer-events-none">
+                        <span class="material-symbols-outlined text-[15px] text-yaru-orange">terminal</span>
+                        <span data-i18n="terminal.title">abd@sisr-node-044: ~ (zsh)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-3.5 h-3.5 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[9px]"
+                            onclick="wm.minimizeWindow('terminal-win')"><span
+                                class="material-symbols-outlined text-[9px]">remove</span></button>
+                        <button
+                            class="w-3.5 h-3.5 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[9px]"
+                            onclick="wm.maximizeWindow('terminal-win')"><span
+                                class="material-symbols-outlined text-[9px]">crop_square</span></button>
+                        <button
+                            class="w-3.5 h-3.5 rounded-full bg-[#E95420] text-white flex items-center justify-center text-[9px]"
+                            onclick="wm.closeWindow('terminal-win')"><span
+                                class="material-symbols-outlined text-[9px]">close</span></button>
+                    </div>
+                </div>
+                <div class="p-4 overflow-y-auto flex-1 text-sm text-green-400 bg-[#160010] flex flex-col justify-between"
+                    id="terminal-body" onclick="document.getElementById('terminal-input').focus()">
+                    <div>
+                        <p class="text-zinc-400 text-xs" data-i18n="terminal.system">Ubuntu 24.04 LTS (GNU/Linux
+                            6.8.0-31-generic x86_64)</p>
+                        <p class="text-zinc-500 text-xs mt-0.5" data-i18n="terminal.help">Tapez <span
+                                class="text-yaru-orange font-bold">help</span>, <span
+                                class="text-yaru-orange font-bold">stage</span>, <span
+                                class="text-yaru-orange font-bold">skills</span>, ou <span
+                                class="text-yaru-orange font-bold">cv</span>.</p>
+                        <div class="mt-3">
+                            <span class="text-yaru-orange font-bold">abd@sisr-node-044</span>:<span
+                                class="text-sky-400">~</span>$ <span class="text-white">neofetch</span>
+                            <pre class="text-[11px] sm:text-[12px] text-zinc-300 mt-1 leading-tight">   `.:/ossyyyyyso+:.`      abd@sisr-node-044
+ .:oyyyyyyyyyyyyyyyyyyo:`   ------------------
+-syyyyyyyyyyyyyyyyyyyyyys-  OS: Ubuntu 24.04 LTS x86_64
++yyyyyyyyyyyyyyyyyyyyyyyy+  Host: Lycee La Coliniere (Nantes)
++yyyyyyyyyyyyyyyyyyyyyyyy+  Kernel: BTS SIO SISR (2e annee)
+-syyyyyyyyyyyyyyyyyyyyyys-  Disponibilite: 11 Janv - 26 Fev 2027 (7 sem)
+ `:oyyyyyyyyyyyyyyyyyyo:`   Mobilite: Nantes / Paris (Hybride &amp; Sur site)
+   `.:/ossyyyyyso+:.`      Contact: En recherche active
+            </pre>
+                        </div>
+                        <div class="mt-2 text-xs" id="terminal-history"></div>
+                    </div>
+                    <div class="flex items-center gap-2 mt-4 text-white shrink-0">
+                        <span class="text-yaru-orange font-bold text-xs sm:text-sm">abd@sisr-node-044</span>:<span
+                            class="text-sky-400 text-xs sm:text-sm">~</span>$
+                        <input autocomplete="off"
+                            class="bg-transparent border-none outline-none flex-1 text-green-300 font-mono text-xs sm:text-sm p-0 focus:ring-0"
+                            id="terminal-input" onkeydown="handleTerminalCommand(event)"
+                            data-i18n-placeholder="terminal.placeholder"
+                            placeholder="Tapez une commande (ex: help, stage, cv)..." spellcheck="false" type="text" />
+                    </div>
+                </div>
+            </div>
+            <!-- =================================================================== -->
+            <!-- FLOATING WINDOW 4: CV.PDF VIEWER                                   -->
+            <!-- =================================================================== -->
+            <div class="wm-window hidden absolute bg-[#242424] rounded-xl yaru-window-shadow border border-white/15 flex-col overflow-hidden select-none"
+                id="cv-win" style="width: 780px; height: 600px; min-width: 320px; min-height: 280px; z-index: 23;">
+                <div
+                    class="wm-headerbar h-11 bg-[#1e1e1e] border-b border-black/50 px-4 flex items-center justify-between select-none cursor-move shrink-0">
+                    <div class="flex items-center gap-2 pointer-events-none">
+                        <span class="material-symbols-outlined text-rose-400 text-[18px]">picture_as_pdf</span>
+                        <span class="font-medium text-[13px] text-white" data-i18n="cv.title">Evince Document Viewer —
+                            cv_abderemane_attoumani.pdf</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.minimizeWindow('cv-win')"><span
+                                class="material-symbols-outlined text-[10px]">remove</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.maximizeWindow('cv-win')"><span
+                                class="material-symbols-outlined text-[10px]">crop_square</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#E95420] text-white flex items-center justify-center text-[10px]"
+                            onclick="wm.closeWindow('cv-win')"><span
+                                class="material-symbols-outlined text-[10px]">close</span></button>
+                    </div>
+                </div>
+                <div class="p-6 overflow-y-auto flex-1 bg-[#181818] text-zinc-200 flex flex-col items-center">
+                    <div
+                        class="w-full max-w-2xl bg-[#202020] p-6 rounded-lg border border-white/10 shadow-xl space-y-4">
+                        <div
+                            class="border-b border-white/10 pb-4 flex flex-col sm:flex-row justify-between items-start gap-3">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Abdérémane Attoumani</h3>
+                                <p class="text-yaru-orange font-mono text-sm mt-0.5" data-i18n="cv.subtitle">Étudiant
+                                    BTS SIO SISR · Recherche
+                                    Stage Janv-Fév 2027</p>
+                                <p class="text-xs text-zinc-400 mt-1" data-i18n="cv.school">Lycée La Colinière (Nantes)
+                                    · Mobilité Nantes
+                                    &amp; Paris (IDF)</p>
+                            </div>
+                            <button
+                                class="px-3.5 py-1.5 rounded bg-yaru-orange hover:bg-yaru-orange-light text-white text-xs font-mono font-medium flex items-center gap-1.5 shadow"
+                                onclick="triggerCvDownload()">
+                                <span class="material-symbols-outlined text-[16px]">download</span>
+                                <span data-i18n="cv.download">Télécharger PDF</span>
+                            </button>
+                        </div>
+                        <div class="space-y-3.5 text-xs text-zinc-300">
+                            <div>
+                                <span class="font-mono text-yaru-orange uppercase font-bold text-[11px]"
+                                    data-i18n="cv.objective">Objectif
+                                    conventionné :</span>
+                                <p class="mt-1 leading-relaxed" data-i18n="cv.objectiveText">Stage technique de 7
+                                    semaines conventionnées du <strong class="text-white">11 Janvier au 26 Février
+                                        2027</strong> en administration
+                                    système, réseaux ou SecOps, avec ouverture vers une alternance 2027-2028.</p>
+                            </div>
+                            <div>
+                                <span class="font-mono text-emerald-400 uppercase font-bold text-[11px]"
+                                    data-i18n="cv.keySkills">Compétences
+                                    clés :</span>
+                                <p class="mt-1 leading-relaxed" data-i18n="cv.keySkillsText">Linux (Debian/Ubuntu
+                                    Server), Active Directory (Samba 4
+                                    / Windows Server), Routage Cisco IOS, Pare-feu pfSense, Docker, Nmap, Grafana, GLPI
+                                    Support N1-N2.</p>
+                            </div>
+                            <div>
+                                <span class="font-mono text-sky-400 uppercase font-bold text-[11px]"
+                                    data-i18n="cv.experience">Expérience
+                                    marquante :</span>
+                                <p class="mt-1 leading-relaxed" data-i18n="cv.experienceText">Stage 1re année chez
+                                    <strong class="text-white">Sparklin</strong> : durcissement des conteneurs (Cyber
+                                    Resilience Act), surveillance Grafana, audit de vulnérabilités Nmap et assistance
+                                    N1-N2.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="h-8 bg-[#181818] border-t border-black/40 px-4 flex items-center justify-between text-[11px] font-mono text-zinc-400 shrink-0">
+                    <span data-i18n="cv.page">Page 1 / 1 · 100%</span>
+                    <span>Evince 46.0</span>
+                </div>
+            </div>
+            <!-- =================================================================== -->
+            <!-- FLOATING WINDOW 5: CONTACT.APP                                     -->
+            <!-- =================================================================== -->
+            <div class="wm-window hidden absolute bg-[#242424] rounded-xl yaru-window-shadow border border-white/15 flex-col overflow-hidden select-none"
+                id="contact-win" style="width: 720px; height: 560px; min-width: 320px; min-height: 280px; z-index: 24;">
+                <div
+                    class="wm-headerbar h-11 bg-[#1e1e1e] border-b border-black/50 px-4 flex items-center justify-between select-none cursor-move shrink-0">
+                    <div class="flex items-center gap-2 pointer-events-none">
+                        <span class="material-symbols-outlined text-teal-400 text-[18px]">mail</span>
+                        <span class="font-medium text-[13px] text-white" data-i18n="contact.barTitle">Nouveau Message —
+                            Contact &amp;
+                            Recrutement</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.minimizeWindow('contact-win')"><span
+                                class="material-symbols-outlined text-[10px]">remove</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.maximizeWindow('contact-win')"><span
+                                class="material-symbols-outlined text-[10px]">crop_square</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#E95420] text-white flex items-center justify-center text-[10px]"
+                            onclick="wm.closeWindow('contact-win')"><span
+                                class="material-symbols-outlined text-[10px]">close</span></button>
+                    </div>
+                </div>
+                <div class="p-6 overflow-y-auto flex-1 bg-[#1e1e1e] text-zinc-200">
+                    <div class="max-w-xl mx-auto space-y-4">
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-white" data-i18n="contact.title">Échanger sur
+                                une opportunité de stage
+                                ou alternance</h3>
+                            <p class="text-xs text-zinc-400 mt-1" data-i18n="contact.subtitle">Nantes Métropole, Paris /
+                                IDF ou format hybride.</p>
+                        </div>
+                        <form class="space-y-3 text-xs" action="https://formspree.io/f/xoedezjg" method="POST">
+                            <div>
+                                <label class="block text-zinc-300 font-mono mb-1"
+                                    data-i18n="contact.recipient">Destinataire :</label>
+                                <input
+                                    class="w-full bg-[#2a2a2a] border border-white/10 rounded px-3 py-2 text-zinc-200 font-mono text-xs cursor-not-allowed"
+                                    readonly="" type="text" value="attoumani.abderemane@gmail.com" />
+                            </div>
+                            <div>
+                                <label class="block text-zinc-300 font-mono mb-1" data-i18n="contact.sender">Expéditeur
+                                    :</label>
+                                <input
+                                    class="w-full bg-[#2a2a2a] border border-white/10 rounded px-3 py-2 text-zinc-100 text-xs focus:border-yaru-orange outline-none"
+                                    type="email" name="email" autocomplete="email" maxlength="254"
+                                    data-i18n-placeholder="contact.senderPlaceholder"
+                                    placeholder="prenom.nom@entreprise.fr" required>
+                            </div>
+                            <div>
+                                <label class="block text-zinc-300 font-mono mb-1" data-i18n="contact.organization">Votre
+                                    Organisation / Entreprise
+                                    :</label>
+                                <input
+                                    class="w-full bg-[#2a2a2a] border border-white/10 rounded px-3 py-2 text-zinc-100 text-xs focus:border-yaru-orange outline-none"
+                                    data-i18n-placeholder="contact.organizationPlaceholder"
+                                    placeholder="Ex: Direction des Systèmes d'Information / SOC..." required=""
+                                    type="text" name="entreprise" />
+                            </div>
+                            <div>
+                                <label class="block text-zinc-300 font-mono mb-1" data-i18n="contact.subject">Objet
+                                    :</label>
+                                <input
+                                    class="w-full bg-[#2a2a2a] border border-white/10 rounded px-3 py-2 text-zinc-100 text-xs focus:border-yaru-orange outline-none"
+                                    data-i18n-placeholder="contact.subjectPlaceholder"
+                                    placeholder="Proposition de stage Janvier 2027 / Alternance" required="" type="text"
+                                    name="objet" />
+                            </div>
+                            <div>
+                                <label class="block text-zinc-300 font-mono mb-1" data-i18n="contact.message">Message
+                                    :</label>
+                                <textarea
+                                    class="w-full bg-[#2a2a2a] border border-white/10 rounded px-3 py-2 text-zinc-100 text-xs focus:border-yaru-orange outline-none"
+                                    data-i18n-placeholder="contact.messagePlaceholder"
+                                    placeholder="Détails du poste, missions envisagées ou créneau d'échange téléphonique..."
+                                    required="" rows="4" name="message"></textarea>
+                            </div>
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                            <div class="flex justify-end gap-2 pt-2">
+                                <button
+                                    class="px-4 py-2 rounded bg-zinc-700 hover:bg-zinc-600 text-white font-mono text-xs"
+                                    onclick="wm.closeWindow('contact-win')" type="button" data-i18n="contact.cancel">
+                                    Annuler</button>
+                                <button
+                                    class="px-4 py-2 rounded bg-yaru-orange hover:bg-yaru-orange-light text-white font-medium text-xs flex items-center gap-1.5 shadow"
+                                    type="submit">
+                                    <span class="material-symbols-outlined text-[14px]">send</span>
+                                    <span data-i18n="contact.send">Envoyer l'invitation</span>
+                                </button>
+
+                            </div>
+                            <p class="text-[10px] text-zinc-500 leading-relaxed" data-i18n="contact.privacy">
+                                Les informations transmises via ce formulaire sont utilisées uniquement pour répondre à
+                                votre demande. Elles ne sont ni revendues ni partagées avec des tiers.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div
+                    class="h-8 bg-[#181818] border-t border-black/40 px-4 flex items-center justify-between text-[11px] font-mono text-zinc-400 shrink-0">
+                    <span data-i18n="contact.footer">SMTP TLS Sécurisé</span>
+                    <span data-i18n="contact.app">Thunderbird Yaru 24.04</span>
+                </div>
+            </div>
+            <!-- =================================================================== -->
+            <!-- FLOATING WINDOW 6: SKILLS.WIN                                      -->
+            <!-- =================================================================== -->
+            <div class="wm-window hidden absolute bg-[#242424] rounded-xl yaru-window-shadow border border-white/15 flex-col overflow-hidden select-none"
+                id="skills-win" style="width: 820px; height: 560px; min-width: 320px; min-height: 280px; z-index: 25;">
+                <div
+                    class="wm-headerbar h-11 bg-[#1e1e1e] border-b border-black/50 px-4 flex items-center justify-between select-none cursor-move shrink-0">
+                    <div class="flex items-center gap-2 pointer-events-none">
+                        <span class="material-symbols-outlined text-emerald-400 text-[18px]">hub</span>
+                        <span class="font-medium text-[13px] text-white" data-i18n="skills.title">Ubuntu Software —
+                            Matrice de Compétences
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.minimizeWindow('skills-win')"><span
+                                class="material-symbols-outlined text-[10px]">remove</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.maximizeWindow('skills-win')"><span
+                                class="material-symbols-outlined text-[10px]">crop_square</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#E95420] text-white flex items-center justify-center text-[10px]"
+                            onclick="wm.closeWindow('skills-win')"><span
+                                class="material-symbols-outlined text-[10px]">close</span></button>
+                    </div>
+                </div>
+                <div class="p-6 overflow-y-auto flex-1 bg-[#1e1e1e] text-zinc-200 space-y-4">
+                    <h3 class="text-base font-bold text-white" data-i18n="skills.heading">6 Domaines de Compétences
+                        Opérationnelles</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs">
+                        <div
+                            class="p-3.5 rounded-xl bg-[#252525] border border-white/5 space-y-1.5 hover:border-yaru-orange/40 transition-colors">
+                            <span class="text-yaru-orange font-bold font-mono text-[13px]" data-i18n="skills.systems">1.
+                                Systèmes &amp;
+                                Serveurs</span>
+                            <p class="text-zinc-400 leading-relaxed" data-i18n="skills.systemsText">Linux Ubuntu/Kali,
+                                Windows Server 2022 (Active
+                                Directory, GPO), DNS, DHCP, durcissement SSH.</p>
+                        </div>
+                        <div
+                            class="p-3.5 rounded-xl bg-[#252525] border border-white/5 space-y-1.5 hover:border-emerald-500/40 transition-colors">
+                            <span class="text-emerald-400 font-bold font-mono text-[13px]" data-i18n="skills.network">2.
+                                Réseaux &amp;
+                                Routage</span>
+                            <p class="text-zinc-400 leading-relaxed" data-i18n="skills.networkText">Cisco Packet Tracer,
+                                VLAN, Inter-VLAN, pfSense.</p>
+                        </div>
+                        <div
+                            class="p-3.5 rounded-xl bg-[#252525] border border-white/5 space-y-1.5 hover:border-sky-400/40 transition-colors">
+                            <span class="text-sky-400 font-bold font-mono text-[13px]" data-i18n="skills.secops">3.
+                                SecOps &amp;
+                                Vulnérabilités</span>
+                            <p class="text-zinc-400 leading-relaxed" data-i18n="skills.secopsText">Nmap, Kali Linux,
+                                analyse de trafic Wireshark,
+                                durcissement CIS, hygiène cyber CRA.</p>
+                        </div>
+                        <div
+                            class="p-3.5 rounded-xl bg-[#252525] border border-white/5 space-y-1.5 hover:border-purple-400/40 transition-colors">
+                            <span class="text-purple-400 font-bold font-mono text-[13px]"
+                                data-i18n="skills.virtualization">4. Virtualisation &amp;
+                                Cloud</span>
+                            <p class="text-zinc-400 leading-relaxed" data-i18n="skills.virtualizationText">VMware,
+                                Oracle VirtualBox, Docker, Docker Compose,
+                                conteneurs légers et isolation.</p>
+                        </div>
+                        <div
+                            class="p-3.5 rounded-xl bg-[#252525] border border-white/5 space-y-1.5 hover:border-amber-400/40 transition-colors">
+                            <span class="text-amber-400 font-bold font-mono text-[13px]"
+                                data-i18n="skills.monitoring">5. Monitoring &amp;
+                                Support</span>
+                            <p class="text-zinc-400 leading-relaxed" data-i18n="skills.monitoringText">Grafana, GLPI
+                                Ticketing N1/N2, sauvegardes
+                                chiffrées, PRA/PCA.</p>
+                        </div>
+                        <div
+                            class="p-3.5 rounded-xl bg-[#252525] border border-white/5 space-y-1.5 hover:border-rose-400/40 transition-colors">
+                            <span class="text-rose-400 font-bold font-mono text-[13px]" data-i18n="skills.dev">6. Dev
+                                &amp;
+                                Automatisation</span>
+                            <p class="text-zinc-400 leading-relaxed" data-i18n="skills.devText">Scripts Bash, Python,
+                                Git/GitHub, double culture
+                                développement web et API.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="h-8 bg-[#181818] border-t border-black/40 px-4 flex items-center justify-between text-[11px] font-mono text-zinc-400 shrink-0">
+                    <span data-i18n="skills.footer">Matrice opérationnelle validée</span>
+                    <span data-i18n="skills.footerApp">App Center 24.04</span>
+                </div>
+            </div>
+            <!-- =================================================================== -->
+            <!-- FLOATING WINDOW 7: PARCOURS.WIN                                    -->
+            <!-- =================================================================== -->
+            <div class="wm-window hidden absolute bg-[#242424] rounded-xl yaru-window-shadow border border-white/15 flex-col overflow-hidden select-none"
+                id="parcours-win"
+                style="width: 740px; height: 520px; min-width: 320px; min-height: 280px; z-index: 26;">
+                <div
+                    class="wm-headerbar h-11 bg-[#1e1e1e] border-b border-black/50 px-4 flex items-center justify-between select-none cursor-move shrink-0">
+                    <div class="flex items-center gap-2 pointer-events-none">
+                        <span class="material-symbols-outlined text-sky-400 text-[18px]">timeline</span>
+                        <span class="font-medium text-[13px] text-white" data-i18n="journey.title">Parcours Scolaire
+                            &amp; Formation</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.minimizeWindow('parcours-win')"><span
+                                class="material-symbols-outlined text-[10px]">remove</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#3e3e3e] hover:bg-[#505050] text-zinc-300 flex items-center justify-center text-[10px]"
+                            onclick="wm.maximizeWindow('parcours-win')"><span
+                                class="material-symbols-outlined text-[10px]">crop_square</span></button>
+                        <button
+                            class="w-4 h-4 rounded-full bg-[#E95420] text-white flex items-center justify-center text-[10px]"
+                            onclick="wm.closeWindow('parcours-win')"><span
+                                class="material-symbols-outlined text-[10px]">close</span></button>
+                    </div>
+                </div>
+                <div class="p-6 overflow-y-auto flex-1 bg-[#1e1e1e] text-zinc-200 space-y-4">
+                    <div class="border-l-2 border-yaru-orange pl-4 space-y-6 text-xs">
+                        <div>
+                            <span class="font-mono text-yaru-orange text-sm font-bold" data-i18n="journey.future">2027 —
+                                2028 (Perspective
+                                active)</span>
+                            <h4 class="text-sm font-bold text-white mt-1" data-i18n="journey.futureTitle">Bachelor ou
+                                Master en Alternance —
+                                Cybersécurité / Systèmes &amp; Réseaux</h4>
+                            <p class="text-zinc-400 mt-1 leading-relaxed" data-i18n="journey.futureText">Arbitrage en
+                                cours pour rentrée 2027 à Nantes
+                                ou Paris. Projets d'infrastructures résilientes et SecOps.</p>
+                        </div>
+                        <div>
+                            <span class="font-mono text-emerald-400 text-sm font-bold" data-i18n="journey.current">2025
+                                — 2027 (En cours)</span>
+                            <h4 class="text-sm font-bold text-white mt-1" data-i18n="journey.currentTitle">BTS SIO
+                                Option SISR — Lycée La Colinière
+                                (Nantes)</h4>
+                            <p class="text-zinc-400 mt-1 leading-relaxed" data-i18n="journey.currentText">Solutions
+                                d'Infrastructure, Systèmes et
+                                Réseaux. Projets d'infrastructures virtualisées, interconnexion réseaux, administration
+                                systèmes et cybersécurité.</p>
+                        </div>
+                        <div>
+                            <span class="font-mono text-zinc-400 text-sm font-bold" data-i18n="journey.past">2024</span>
+                            <h4 class="text-sm font-bold text-white mt-1" data-i18n="journey.pastTitle">Projets
+                                Personnels &amp; Culture Développement
+                            </h4>
+                            <p class="text-zinc-400 mt-1 leading-relaxed" data-i18n="journey.pastText">Initiation aux
+                                architectures web, protocoles
+                                TCP/IP et scripting Python / Linux.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="h-8 bg-[#181818] border-t border-black/40 px-4 flex items-center justify-between text-[11px] font-mono text-zinc-400 shrink-0">
+                    <span data-i18n="journey.footer">Cursus académique SISR</span>
+                    <span data-i18n="journey.footerApp">Timeline 24.04</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========================================================================= -->
+    <!-- COMMAND PALETTE HUD (CMD+K / Ctrl+K)                                      -->
+    <!-- ========================================================================= -->
+    <div class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-start justify-center pt-20 px-4"
+        id="command-palette">
+        <div class="w-full max-w-xl bg-[#242424] rounded-xl yaru-window-shadow border border-white/20 overflow-hidden">
+            <div class="p-3 border-b border-white/10 flex items-center gap-2">
+                <span class="material-symbols-outlined text-yaru-orange">search</span>
+                <input class="w-full bg-transparent text-white text-sm outline-none font-mono" id="hud-search-input"
+                    onkeyup="filterCommandPalette(this.value)" data-i18n-placeholder="search.placeholder"
+                    placeholder="Rechercher une application ou une commande..." />
+                <kbd class="px-2 py-0.5 rounded bg-white/10 text-xs text-zinc-400 font-mono">ESC</kbd>
+            </div>
+            <div class="p-2 text-xs space-y-1 max-h-72 overflow-y-auto" id="hud-results">
+                <button
+                    class="w-full text-left px-3 py-2 rounded hover:bg-white/10 flex items-center justify-between text-zinc-200"
+                    onclick="wm.openWindow('stages-win'); toggleCommandPalette();">
+                    <span class="flex items-center gap-2" data-i18n="search.stages"><span
+                            class="material-symbols-outlined text-[16px] text-yaru-orange">assignment</span> Stages
+                        &amp; Opportunités 2027</span>
+                    <span class="text-zinc-500 font-mono text-[10px]">App</span>
+                </button>
+                <button
+                    class="w-full text-left px-3 py-2 rounded hover:bg-white/10 flex items-center justify-between text-zinc-200"
+                    onclick="wm.openWindow('projets-win'); toggleCommandPalette();">
+                    <span class="flex items-center gap-2" data-i18n="search.projects">
+                        <span class="material-symbols-outlined text-[16px] text-amber-400">folder</span>
+                        Projets Labs &amp; IA
+                    </span>
+                    <span class="text-zinc-500 font-mono text-[10px]">App</span>
+                </button>
+                <button
+                    class="w-full text-left px-3 py-2 rounded hover:bg-white/10 flex items-center justify-between text-zinc-200"
+                    onclick="wm.openWindow('skills-win'); toggleCommandPalette();">
+                    <span class="flex items-center gap-2" data-i18n="search.skills"><span
+                            class="material-symbols-outlined text-[16px] text-emerald-400">hub</span> Compétences SISR /
+                        SecOps</span>
+                    <span class="text-zinc-500 font-mono text-[10px]" data-i18n="search.type">App</span>
+                </button>
+                <button
+                    class="w-full text-left px-3 py-2 rounded hover:bg-white/10 flex items-center justify-between text-zinc-200"
+                    onclick="wm.openWindow('terminal-win'); toggleCommandPalette();">
+                    <span class="flex items-center gap-2" data-i18n="search.terminal"><span
+                            class="material-symbols-outlined text-[16px] text-purple-400">terminal</span> Terminal
+                        Sisr-node</span>
+                    <span class="text-zinc-500 font-mono text-[10px]" data-i18n="search.cli">CLI</span>
+                </button>
+                <button
+                    class="w-full text-left px-3 py-2 rounded hover:bg-white/10 flex items-center justify-between text-zinc-200"
+                    onclick="wm.openWindow('cv-win'); toggleCommandPalette();">
+                    <span class="flex items-center gap-2" data-i18n="search.cv"><span
+                            class="material-symbols-outlined text-[16px] text-rose-400">picture_as_pdf</span>
+                        Télécharger CV [PDF]</span>
+                    <span class="text-zinc-500 font-mono text-[10px]" data-i18n="search.document">Document</span>
+                </button>
+                <button
+                    class="w-full text-left px-3 py-2 rounded hover:bg-white/10 flex items-center justify-between text-zinc-200"
+                    onclick="wm.openWindow('contact-win'); toggleCommandPalette();">
+                    <span class="flex items-center gap-2" data-i18n="search.contact"><span
+                            class="material-symbols-outlined text-[16px] text-teal-400">mail</span> Contacter
+                        Abdérémane</span>
+                    <span class="text-zinc-500 font-mono text-[10px]" data-i18n="search.action">Action</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- ========================================================================= -->
+    <!-- ADVANCED DYNAMIC WINDOW MANAGER JAVASCRIPT ENGINE                         -->
+    <!-- ========================================================================= -->
+    <script>
+        class UbuntuWindowManager {
+            constructor() {
+                this.highestZ = 30;
+                this.activeWindowId = null;
+                this.windows = {};
+                this.isDragging = false;
+                this.isResizing = false;
+                this.currentAction = null;
+                this.viewport = document.getElementById('desktop-canvas');
+
+                this.appTitles = {
+                    "stages-win": "window.stages",
+                    "projets-win": "window.projects",
+                    "terminal-win": "window.terminal",
+                    "cv-win": "window.cv",
+                    "contact-win": "window.contact",
+                    "skills-win": "window.skills",
+                    "parcours-win": "window.journey",
+                    "project-detail-win": "window.projectDetail"
+                };
+
+                this.init();
+            }
+
+            init() {
+                const winNodes = document.querySelectorAll('.wm-window');
+                winNodes.forEach((node, index) => {
+                    const id = node.id;
+                    this.windows[id] = {
+                        element: node,
+                        isMaximized: false,
+                        isMinimized: false,
+                        isOpen: !node.classList.contains('hidden'),
+                        prevRect: null
+                    };
+
+                    this.attachResizeHandles(node);
+                    this.attachEvents(id, node);
+
+                    // Initial center positioning for desktop screens
+                    if (!node.classList.contains('hidden')) {
+                        this.centerWindow(id, index * 24);
+                        this.focusWindow(id);
+                    }
+                });
+
+                // Global keyboard and pointer bindings
+                window.addEventListener('mousemove', (e) => this.onPointerMove(e));
+                window.addEventListener('touchmove', (e) => this.onTouchMove(e), { passive: false });
+                window.addEventListener('mouseup', () => this.onPointerUp());
+                window.addEventListener('touchend', () => this.onPointerUp());
+
+                // Escape shortcut to close top window
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        const cmdPalette = document.getElementById('command-palette');
+                        if (cmdPalette && !cmdPalette.classList.contains('hidden')) {
+                            cmdPalette.classList.add('hidden');
+                            return;
+                        }
+                        if (this.activeWindowId) {
+                            this.closeWindow(this.activeWindowId);
+                        }
+                    }
+                });
+
+                // Responsive adaptation on resize
+                window.addEventListener('resize', () => {
+                    Object.keys(this.windows).forEach(id => {
+                        const win = this.windows[id];
+                        if (win.isOpen && !win.isMinimized) {
+                            if (window.innerWidth < 768) {
+                                this.applyMobileFullscreen(id);
+                            }
+                        }
+                    });
+                });
+
+                this.updateDockIndicators();
+            }
+
+            attachResizeHandles(node) {
+                const handles = ['r', 'b', 'l', 't', 'rb', 'lb', 'rt', 'lt'];
+                handles.forEach(type => {
+                    const h = document.createElement('div');
+                    h.className = `resizer resizer-${type}`;
+                    h.dataset.resize = type;
+                    node.appendChild(h);
+                });
+            }
+
+            attachEvents(id, node) {
+                node.addEventListener('mousedown', () => this.focusWindow(id));
+                node.addEventListener('touchstart', () => this.focusWindow(id), { passive: true });
+
+                const header = node.querySelector('.wm-headerbar');
+                if (header) {
+                    header.addEventListener('mousedown', (e) => {
+                        if (e.target.closest('button')) return;
+                        this.startDrag(id, e.clientX, e.clientY);
+                    });
+                    header.addEventListener('touchstart', (e) => {
+                        if (e.target.closest('button')) return;
+                        const touch = e.touches[0];
+                        this.startDrag(id, touch.clientX, touch.clientY);
+                    }, { passive: true });
+                    header.addEventListener('dblclick', (e) => {
+                        if (e.target.closest('button')) return;
+                        this.maximizeWindow(id);
+                    });
+                }
+
+                node.querySelectorAll('.resizer').forEach(resizer => {
+                    resizer.addEventListener('mousedown', (e) => {
+                        e.stopPropagation();
+                        this.startResize(id, resizer.dataset.resize, e.clientX, e.clientY);
+                    });
+                    resizer.addEventListener('touchstart', (e) => {
+                        e.stopPropagation();
+                        const touch = e.touches[0];
+                        this.startResize(id, resizer.dataset.resize, touch.clientX, touch.clientY);
+                    }, { passive: false });
+                });
+            }
+
+            centerWindow(id, offset = 0) {
+                const win = this.windows[id];
+                if (!win) return;
+                const el = win.element;
+                const vpW = this.viewport.clientWidth;
+                const vpH = this.viewport.clientHeight;
+
+                if (window.innerWidth < 768) {
+                    this.applyMobileFullscreen(id);
+                    return;
+                }
+
+                let w = parseInt(el.style.width) || Math.min(900, vpW - 40);
+                let h = parseInt(el.style.height) || Math.min(620, vpH - 40);
+
+                w = Math.min(w, vpW - 30);
+                h = Math.min(h, vpH - 30);
+
+                const left = Math.max(16, (vpW - w) / 2 + offset);
+                const top = Math.max(16, (vpH - h) / 2 + offset);
+
+                el.style.width = `${w}px`;
+                el.style.height = `${h}px`;
+                el.style.left = `${left}px`;
+                el.style.top = `${top}px`;
+            }
+
+            applyMobileFullscreen(id) {
+                const el = this.windows[id].element;
+                el.style.left = '0px';
+                el.style.top = '0px';
+                el.style.width = '100%';
+                el.style.height = '100%';
+                el.style.borderRadius = '0px';
+            }
+
+            startDrag(id, x, y) {
+                const win = this.windows[id];
+                if (!win || win.isMaximized || window.innerWidth < 768) return;
+                this.focusWindow(id);
+
+                const rect = win.element.getBoundingClientRect();
+                const vpRect = this.viewport.getBoundingClientRect();
+
+                this.isDragging = true;
+                this.currentAction = {
+                    type: 'drag',
+                    id: id,
+                    startX: x,
+                    startY: y,
+                    origLeft: rect.left - vpRect.left,
+                    origTop: rect.top - vpRect.top
+                };
+                win.element.classList.remove('window-animating');
+            }
+
+            startResize(id, dir, x, y) {
+                const win = this.windows[id];
+                if (!win || win.isMaximized || window.innerWidth < 768) return;
+                this.focusWindow(id);
+
+                const rect = win.element.getBoundingClientRect();
+                const vpRect = this.viewport.getBoundingClientRect();
+
+                this.isResizing = true;
+                this.currentAction = {
+                    type: 'resize',
+                    id: id,
+                    dir: dir,
+                    startX: x,
+                    startY: y,
+                    origLeft: rect.left - vpRect.left,
+                    origTop: rect.top - vpRect.top,
+                    origWidth: rect.width,
+                    origHeight: rect.height,
+                    minWidth: 320,
+                    minHeight: 260
+                };
+                win.element.classList.remove('window-animating');
+            }
+
+            onPointerMove(e) {
+                if (!this.currentAction) return;
+                this.handleMovement(e.clientX, e.clientY);
+            }
+
+            onTouchMove(e) {
+                if (!this.currentAction) return;
+                const touch = e.touches[0];
+                this.handleMovement(touch.clientX, touch.clientY);
+            }
+
+            handleMovement(clientX, clientY) {
+                const act = this.currentAction;
+                const win = this.windows[act.id];
+                if (!win) return;
+                const el = win.element;
+                const dx = clientX - act.startX;
+                const dy = clientY - act.startY;
+
+                if (act.type === 'drag') {
+                    const maxL = this.viewport.clientWidth - 100;
+                    const maxT = this.viewport.clientHeight - 60;
+                    const newL = Math.max(-act.origWidth + 120 || -100, Math.min(maxL, act.origLeft + dx));
+                    const newT = Math.max(0, Math.min(maxT, act.origTop + dy));
+
+                    el.style.left = `${newL}px`;
+                    el.style.top = `${newT}px`;
+                } else if (act.type === 'resize') {
+                    let newW = act.origWidth;
+                    let newH = act.origHeight;
+                    let newL = act.origLeft;
+                    let newT = act.origTop;
+
+                    if (act.dir.includes('r')) {
+                        newW = Math.max(act.minWidth, act.origWidth + dx);
+                    }
+                    if (act.dir.includes('b')) {
+                        newH = Math.max(act.minHeight, act.origHeight + dy);
+                    }
+                    if (act.dir.includes('l')) {
+                        const potentialW = act.origWidth - dx;
+                        if (potentialW >= act.minWidth) {
+                            newW = potentialW;
+                            newL = act.origLeft + dx;
+                        }
+                    }
+                    if (act.dir.includes('t')) {
+                        const potentialH = act.origHeight - dy;
+                        if (potentialH >= act.minHeight) {
+                            newH = potentialH;
+                            newT = act.origTop + dy;
+                        }
+                    }
+
+                    el.style.width = `${newW}px`;
+                    el.style.height = `${newH}px`;
+                    el.style.left = `${newL}px`;
+                    el.style.top = `${newT}px`;
+                }
+            }
+
+            onPointerUp() {
+                this.isDragging = false;
+                this.isResizing = false;
+                this.currentAction = null;
+            }
+
+            focusWindow(id) {
+                const win = this.windows[id];
+                if (!win) return;
+                this.highestZ += 1;
+                win.element.style.zIndex = this.highestZ;
+                this.activeWindowId = id;
+
+                // Toggle focus visual class
+                Object.keys(this.windows).forEach(k => {
+                    this.windows[k].element.classList.remove('window-focused');
+                });
+                win.element.classList.add('window-focused');
+
+                // Update topbar app title
+                const topBarName = document.getElementById("topbar-app-name");
+
+                if (topBarName) {
+                    const language = typeof getStoredLanguage === "function" ? getStoredLanguage() : "fr";
+                    const translationKey = this.appTitles[id];
+                    const translatedTitle = typeof translations !== "undefined" && translations[language][translationKey]
+                        ? translations[language][translationKey]
+                        : translationKey;
+
+                    topBarName.innerText = translatedTitle;
+                }
+                this.updateDockIndicators();
+            }
+
+            openWindow(id) {
+                const win = this.windows[id];
+                if (!win) return;
+                const el = win.element;
+
+                if (!win.isOpen) {
+                    win.isOpen = true;
+                    el.classList.remove('hidden');
+                    el.classList.add('flex', 'window-animating');
+                    el.style.opacity = '0';
+                    el.style.transform = 'scale(0.96)';
+
+                    if (!win.prevRect) {
+                        this.centerWindow(id, Math.floor(Math.random() * 20));
+                    }
+
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'scale(1)';
+                    }, 10);
+                } else if (win.isMinimized) {
+                    this.restoreWindow(id);
+                }
+
+                this.focusWindow(id);
+                this.updateDockIndicators();
+            }
+
+            closeWindow(id) {
+                const win = this.windows[id];
+                if (!win || !win.isOpen) return;
+                const el = win.element;
+
+                el.classList.add('window-animating');
+                el.style.opacity = '0';
+                el.style.transform = 'scale(0.92)';
+
+                setTimeout(() => {
+                    el.classList.add('hidden');
+                    el.classList.remove('flex');
+                    win.isOpen = false;
+                    win.isMinimized = false;
+                    this.updateDockIndicators();
+
+                    // Switch focus to highest visible window
+                    const openWins = Object.keys(this.windows).filter(k => this.windows[k].isOpen && !this.windows[k].isMinimized);
+                    if (openWins.length > 0) {
+                        this.focusWindow(openWins[openWins.length - 1]);
+                    } else {
+                        const topBarName = document.getElementById('topbar-app-name');
+                        if (topBarName) topBarName.innerText = 'Ubuntu 24.04';
+                    }
+                }, 180);
+            }
+
+            minimizeWindow(id) {
+                const win = this.windows[id];
+                if (!win || !win.isOpen) return;
+                const el = win.element;
+
+                el.classList.add('window-animating');
+                el.style.opacity = '0';
+                el.style.transform = 'scale(0.7) translateY(60px)';
+
+                setTimeout(() => {
+                    el.classList.add('hidden');
+                    el.classList.remove('flex');
+                    win.isMinimized = true;
+                    this.updateDockIndicators();
+
+                    // Find next window to focus
+                    const remaining = Object.keys(this.windows).filter(k => this.windows[k].isOpen && !this.windows[k].isMinimized);
+                    if (remaining.length > 0) {
+                        this.focusWindow(remaining[remaining.length - 1]);
+                    }
+                }, 180);
+            }
+
+            restoreWindow(id) {
+                const win = this.windows[id];
+                if (!win) return;
+                const el = win.element;
+
+                el.classList.remove('hidden');
+                el.classList.add('flex', 'window-animating');
+                win.isMinimized = false;
+
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'scale(1) translateY(0)';
+                }, 10);
+
+                this.focusWindow(id);
+                this.updateDockIndicators();
+            }
+
+            maximizeWindow(id) {
+                const win = this.windows[id];
+                if (!win || !win.isOpen) return;
+                const el = win.element;
+                el.classList.add('window-animating');
+
+                if (!win.isMaximized) {
+                    // Save current geometry
+                    win.prevRect = {
+                        left: el.style.left,
+                        top: el.style.top,
+                        width: el.style.width,
+                        height: el.style.height,
+                        borderRadius: el.style.borderRadius
+                    };
+
+                    el.style.left = '0px';
+                    el.style.top = '0px';
+                    el.style.width = '100%';
+                    el.style.height = '100%';
+                    el.style.borderRadius = '0px';
+                    win.isMaximized = true;
+                } else {
+                    // Restore previous geometry
+                    if (win.prevRect) {
+                        el.style.left = win.prevRect.left;
+                        el.style.top = win.prevRect.top;
+                        el.style.width = win.prevRect.width;
+                        el.style.height = win.prevRect.height;
+                        el.style.borderRadius = '0.75rem';
+                    } else {
+                        this.centerWindow(id);
+                    }
+                    win.isMaximized = false;
+                }
+                this.focusWindow(id);
+            }
+
+            dockClick(id) {
+                const win = this.windows[id];
+                if (!win) return;
+
+                if (!win.isOpen) {
+                    this.openWindow(id);
+                } else if (win.isMinimized) {
+                    this.restoreWindow(id);
+                } else if (this.activeWindowId === id) {
+                    this.minimizeWindow(id);
+                } else {
+                    this.focusWindow(id);
+                }
+            }
+
+            updateDockIndicators() {
+                Object.keys(this.windows).forEach(id => {
+                    const ind = document.getElementById(`dock-ind-${id}`);
+                    const win = this.windows[id];
+                    if (ind) {
+                        if (win.isOpen) {
+                            ind.classList.remove('opacity-0');
+                            ind.classList.add('opacity-100');
+                            if (this.activeWindowId === id && !win.isMinimized) {
+                                ind.style.height = '20px';
+                                ind.style.backgroundColor = '#E95420';
+                            } else {
+                                ind.style.height = '7px';
+                                ind.style.backgroundColor = '#a0a0a0';
+                            }
+                        } else {
+                            ind.classList.add('opacity-0');
+                            ind.classList.remove('opacity-100');
+                            ind.style.height = '0px';
+                        }
+                    }
+                });
+            }
+        }
+
+        // Instantiate Window Manager globally
+        const wm = new UbuntuWindowManager();
+
+        // Tab switcher for stages window
+        function switchStageTab(tabKey) {
+            const tabs = ['s2', 'sparklin', 'alternance'];
+            tabs.forEach(key => {
+                const btn = document.getElementById(`tab-btn-${key}`);
+                const panel = document.getElementById(`panel-stage-${key}`);
+                if (!btn || !panel) return;
+
+                if (key === tabKey) {
+                    panel.classList.remove('hidden');
+                    panel.classList.add('flex');
+                    btn.classList.add('bg-[#2f2f2f]', 'text-white', 'font-medium', 'border-b-2', 'border-yaru-orange');
+                    btn.classList.remove('text-zinc-400');
+                } else {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('flex');
+                    btn.classList.remove('bg-[#2f2f2f]', 'text-white', 'font-medium', 'border-b-2', 'border-yaru-orange');
+                    btn.classList.add('text-zinc-400');
+                }
+            });
+        }
+
+        // Command palette HUD
+        function toggleCommandPalette() {
+            const palette = document.getElementById('command-palette');
+            palette.classList.toggle('hidden');
+            if (!palette.classList.contains('hidden')) {
+                setTimeout(() => document.getElementById('hud-search-input').focus(), 50);
+            }
+        }
+
+        document.addEventListener("click", (event) => {
+            const palette = document.getElementById("command-palette");
+
+            if (!palette || palette.classList.contains("hidden")) {
+                return;
+            }
+
+            const clickedInsidePalette = palette.contains(event.target);
+            const clickedSearchButton = event.target.closest('[onclick*="toggleCommandPalette"]');
+
+            if (!clickedInsidePalette && !clickedSearchButton) {
+                toggleCommandPalette();
+            }
+        });
+
+        function filterCommandPalette(term) {
+            const termLower = term.toLowerCase();
+            const buttons = document.querySelectorAll('#hud-results button');
+            buttons.forEach(btn => {
+                btn.style.display = btn.innerText.toLowerCase().includes(termLower) ? 'flex' : 'none';
+            });
+        }
+
+        function toggleAppOverview() {
+            toggleCommandPalette();
+        }
+
+        function focusTopWindow() {
+            if (wm.activeWindowId) {
+                wm.focusWindow(wm.activeWindowId);
+            }
+        }
+
+        function toggleCalendarWidget() {
+            alert(translations[getStoredLanguage()]["calendar.alert"]);
+        }
+
+        function toggleQuickSettings() {
+            alert(translations[getStoredLanguage()]["quickSettings.alert"]);
+        }
+
+        function triggerCvDownload() {
+            const link = document.createElement("a");
+            link.href = "assets/cv_attoumani_abderemane.pdf";
+            link.download = "cv_attoumani_abderemane.pdf";
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+        }
+
+        async function handleContactSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const button = form.querySelector('button[type="submit"]');
+            const originalText = button.innerText;
+
+            button.disabled = true;
+            button.innerText = translations[getStoredLanguage()]["contact.sending"];
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error("Erreur lors de l'envoi");
+                }
+
+                form.reset();
+                alert(translations[getStoredLanguage()]["contact.success"]);
+                wm.closeWindow("contact-win");
+            } catch (error) {
+                alert(translations[getStoredLanguage()]["contact.error"]);
+            } finally {
+                button.disabled = false;
+                button.innerText = originalText;
+            }
+        }
+
+        // Terminal interactive shell
+        function handleTerminalCommand(event) {
+            if (event.key === 'Enter') {
+                const input = document.getElementById('terminal-input');
+                const history = document.getElementById('terminal-history');
+                const val = input.value.trim().toLowerCase();
+
+                const language = getStoredLanguage();
+
+                if (val === "help") {
+                    output = translations[language]["terminal.helpOutput"];
+                } else if (val === "status") {
+                    output = translations[language]["terminal.statusOutput"];
+                } else if (val === "stage" || val === "stages") {
+                    output = translations[language]["terminal.stageOutput"];
+                    wm.openWindow("stages-win");
+                } else if (val === "skills") {
+                    output = translations[language]["terminal.skillsOutput"];
+                    wm.openWindow("skills-win");
+                } else if (val === "cv") {
+                    output = translations[language]["terminal.cvOutput"];
+                    wm.openWindow("cv-win");
+                } else if (val === "contact") {
+                    output = translations[language]["terminal.contactOutput"];
+                    wm.openWindow("contact-win");
+                } else if (val === "clear") {
+                    history.innerHTML = "";
+                    input.value = "";
+                    return;
+                } else {
+                    output = translations[language]["terminal.unknown"];
+                }
+
+                const div = document.createElement("div");
+                div.className = "mt-1.5";
+
+                const prompt = document.createElement("span");
+                prompt.className = "text-yaru-orange font-bold";
+                prompt.textContent = "abdsisr-node-044";
+
+                const separator = document.createElement("span");
+                separator.className = "text-sky-400";
+                separator.textContent = ":~$ ";
+
+                const command = document.createElement("span");
+                command.className = "text-white";
+                command.textContent = input.value;
+
+                const result = document.createElement("div");
+                result.className = "text-zinc-300 text-xs mt-0.5";
+                result.textContent = output;
+
+                div.append(prompt, separator, command, result);
+                history.appendChild(div);
+                input.value = '';
+
+                const terminalBody = document.getElementById('terminal-body');
+                if (terminalBody) terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
+        }
+
+        // Keyboard shortcuts (Cmd+K / Ctrl+K)
+        window.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                toggleCommandPalette();
+            }
+        });
+
+        // Update gnome status bar clock
+        function updateClock() {
+            const clock = document.getElementById('gnome-clock');
+            const now = new Date();
+            const days = ['Dim', 'Lun', 'Mer', 'Mer', 'Jeu', 'Ven', 'Sam'];
+            const months = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Aoû', 'Sep', 'Oct', 'Nov', 'Déc'];
+            const dayName = days[now.getDay()];
+            const dayNum = now.getDate();
+            const monthName = months[now.getMonth()];
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            if (clock) {
+                clock.innerText = `${dayName} ${dayNum} ${monthName} ${hours}:${minutes}`;
+            }
+        }
+        setInterval(updateClock, 30000);
+        updateClock();
+    </script>
+    <script src="js/i18n.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+
+</html>

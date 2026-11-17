@@ -1,0 +1,17 @@
+# Fichiers sensibles et locaux
+.env
+.env.*
+*.log
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Sauvegardes et fichiers temporaires
+*.bak
+*.tmp
+~$*
+
+# Ne jamais publier de documents internes
+confidentiel/
+private/
+secrets/

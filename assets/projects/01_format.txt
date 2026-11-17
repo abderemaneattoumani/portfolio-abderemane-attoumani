@@ -1,0 +1,4 @@
+Format recommandé : WebP 
+Largeur : 1200 px
+Hauteur 675 px
+Poids inférieur à 200 Ko

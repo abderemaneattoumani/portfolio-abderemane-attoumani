@@ -1,0 +1,151 @@
+{
+  "projects": [
+    {
+      "id": "password-analyzer-ai",
+      "title": {
+        "fr": "Password Analyzer AI",
+        "en": "Password Analyzer AI"
+      },
+      "category": {
+        "fr": "Cybersécurité / IA",
+        "en": "Cybersecurity / AI"
+      },
+      "shortDescription": {
+        "fr": "Analyseur de robustesse des mots de passe basé sur l’apprentissage automatique.",
+        "en": "Machine-learning-based password strength analysis tool."
+      },
+      "problem": {
+        "fr": "Évaluer la robustesse réelle d’un mot de passe au-delà des règles classiques.",
+        "en": "Assess real password strength beyond standard rule-based checks."
+      },
+      "solution": {
+        "fr": "Modèle de machine learning, extraction de caractéristiques et génération de rapports PDF.",
+        "en": "Machine-learning model, feature extraction and automated PDF reporting."
+      },
+      "impact": {
+        "fr": "Aide à identifier les mots de passe faibles et à produire des recommandations de sécurité.",
+        "en": "Helps identify weak passwords and produce security recommendations."
+      },
+      "stack": ["Python", "Gradient Boosting", "Scikit-learn", "Pandas", "ReportLab"],
+      "status": {
+        "fr": "Terminé",
+        "en": "Completed"
+      },
+      "github": "https://github.com/abderemaneattoumani/Password_Analyzer",
+      "demo": "https://abderemaneattoumani.github.io/Password_Analyzer/",
+      "image": "assets/projects/password-analyzer.webp",
+      "featured": true
+    },
+
+    {
+      "id": "ai-network-intrusion-detector",
+      "title": {
+        "fr": "AI Network Intrusion Detector",
+        "en": "AI Network Intrusion Detector"
+      },
+      "category": {
+        "fr": "Cybersécurité / Réseaux / IA",
+        "en": "Cybersecurity / Networking / AI"
+      },
+      "shortDescription": {
+        "fr": "Système de détection d’anomalies réseau basé sur un modèle Random Forest.",
+        "en": "Network anomaly detection system based on a Random Forest model."
+      },
+      "problem": {
+        "fr": "Identifier des comportements réseau suspects dans un jeu de données de trafic.",
+        "en": "Identify suspicious network behaviour in traffic datasets."
+      },
+      "solution": {
+        "fr": "Prétraitement des données, entraînement d’un modèle Random Forest et évaluation des performances.",
+        "en": "Data preprocessing, Random Forest model training and performance evaluation."
+      },
+      "impact": {
+        "fr": "Démontre l’application du machine learning à la détection d’intrusions réseau.",
+        "en": "Demonstrates the application of machine learning to network intrusion detection."
+      },
+      "stack": ["Python", "Scikit-learn", "Pandas", "Random Forest", "Wireshark"],
+      "status": {
+        "fr": "Terminé",
+        "en": "Completed"
+      },
+      "github": "https://github.com/abderemaneattoumani/ids-reseau-ia",
+      "demo": null,
+      "image": "assets/projects/network-intrusion.webp",
+      "featured": true
+    },
+
+    {
+      "id": "episight",
+      "title": {
+        "fr": "EpiSight",
+        "en": "EpiSight"
+      },
+      "category": {
+        "fr": "Data / IA / Web",
+        "en": "Data / AI / Web"
+      },
+      "shortDescription": {
+        "fr": "Tableau de bord épidémiologique interactif avec prévision à 7 jours.",
+        "en": "Interactive epidemiological dashboard with seven-day forecasting."
+      },
+      "problem": {
+        "fr": "Visualiser et anticiper l’évolution de cas de COVID-19 en France à partir de données publiques.",
+        "en": "Visualise and forecast the evolution of COVID-19 cases in France using public data."
+      },
+      "solution": {
+        "fr": "Traitement de données Pandas, visualisation Streamlit et modèle de prévision Prophet.",
+        "en": "Pandas data processing, Streamlit visualisation and Prophet forecasting model."
+      },
+      "impact": {
+        "fr": "Permet d’explorer les tendances, de détecter les vagues et de visualiser une prévision à court terme.",
+        "en": "Enables trend exploration, wave detection and short-term forecast visualisation."
+      },
+      "stack": ["Python", "Pandas", "Streamlit", "Prophet", "Data visualisation"],
+      "status": {
+        "fr": "Terminé",
+        "en": "Completed"
+      },
+      "github": "https://github.com/abderemaneattoumani/EpiSight",
+      "demo": "https://episight.streamlit.app/",
+      "image": "assets/projects/episight.webp",
+      "featured": true
+    },
+
+    {
+      "id": "task-flow-web-utilities",
+      "title": {
+        "fr": "Task Flow & Web Utilities",
+        "en": "Task Flow & Web Utilities"
+      },
+      "category": {
+        "fr": "Développement web",
+        "en": "Web development"
+      },
+      "shortDescription": {
+        "fr": "Application de gestion de tâches et suite d’utilitaires web interactifs.",
+        "en": "Task management application and interactive web utilities suite."
+      },
+      "problem": {
+        "fr": "Créer des outils web simples, réactifs et réutilisables.",
+        "en": "Build simple, responsive and reusable web tools."
+      },
+      "solution": {
+        "fr": "Interface web avec gestion de tâches, générateur de mots de passe, application météo et quiz.",
+        "en": "Web interface with task management, password generator, weather app and quiz."
+      },
+      "impact": {
+        "fr": "Démontre la maîtrise du développement frontend, de l’UX et de la logique JavaScript.",
+        "en": "Demonstrates frontend development, UX and JavaScript logic skills."
+      },
+      "stack": ["HTML5", "Tailwind CSS", "JavaScript"],
+      "status": {
+        "fr": "Terminé",
+        "en": "Completed"
+      },
+      "github": "https://github.com/abderemaneattoumani/task_flow",
+      "demo": "https://abderemaneattoumani.github.io/task_flow/",
+      "image": "assets/projects/taskflow.webp",
+      "featured": false
+    }
+  ]
+}
