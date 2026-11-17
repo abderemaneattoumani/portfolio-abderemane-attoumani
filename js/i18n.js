@@ -1,6 +1,6 @@
 const translations = {
     fr: {
-        "meta.title": "Portfolio Abdérémane Attoumani",
+        "meta.title": "Portfolio - Abdérémane Attoumani",
 
         "nav.desktopTitle": "Bureau Ubuntu 24.04",
         "nav.activities": "Activités",
