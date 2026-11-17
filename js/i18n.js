@@ -230,7 +230,7 @@ const translations = {
     },
 
     en: {
-        "meta.title": "Cybersecurity Portfolio - Abdérémane Attoumani",
+        "meta.title": "Portfolio - Abdérémane Attoumani",
 
         "nav.desktopTitle": "Ubuntu 24.04 Desktop",
         "nav.activities": "Activities",
